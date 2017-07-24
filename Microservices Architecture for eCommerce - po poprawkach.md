@@ -1,4 +1,4 @@
-## ![image alt text](image_0.png)x
+## ![image alt text](gfx/image_0.png)x
 
 ## Foreword
 
@@ -124,7 +124,7 @@ The scalability and deployment processes of microservice-based systems can be mu
 
 Dockerization of IT environments, monitoring tools and DevOps tools (Ansible, Chef, Puppet and others) can take your development team to the the next level of effectiveness.
 
-![image alt text](image_1.jpg)
+![image alt text](gfx/image_1.jpg)
 
 *Fig. 1: A microservice approach encourages enterprises to become more agile, with cross-functional teams responsible for each service. Implementing such a company structure, as in Spotify or Netflix, can allow you to adopt and test new ideas quickly, and build strong ownership feelings across the teams.*
 
@@ -148,7 +148,7 @@ Martin Fowler, one of the pioneers  (NOTE:  https://martinfowler.com/articles/mi
 
 *Almost all the cases where I've heard of a system that was built as a microservice system from scratch, has ended up in serious trouble."*
 
-![image alt text](image_2.jpg)
+![image alt text](gfx/image_2.jpg)
 
 *Fig. 2: Initial, monolithic architecture began after 4 years of development of a large-scale, 100M EUR/yr B2B platform.*
 
@@ -156,7 +156,7 @@ When you begin a new application, how sure are you that it will be useful to you
 
 During this first phase you need to prioritize the speed of development to basically figure out  what works. 
 
-![image alt text](image_3.jpg)
+![image alt text](gfx/image_3.jpg)
 
 *Fig. 3: The very same system but after architecture re-engineering; now the system core is built upon 10 microservices.*
 
@@ -186,7 +186,7 @@ Sharing the same data structures between services can be difficult - particularl
 
 Breaking apart the data can make information management more complicated;the individual storage systems can easily de-sync or become inconsistent. You need to add a tool that performs master data management. While operating in the background, it must eventually find and fix inconsistencies. One of the patterns for such synchronization is **Event Sourcing. **This pattern can help you with such situations by providing you with a reliable history log of all data changes that can be rolled back and forth. **Eventual Consistency** and **CAP theorem** are fundamentals that must be considered during the design phase.
 
-![image alt text](image_4.jpg)
+![image alt text](gfx/image_4.jpg)
 
 *Fig. 4: Each microservice should have a separate database and be as self-sufficient as it can.  From a design point of view - it’s the simplest way to avoid conflicts. Remember - different teams are working on different parts of the application. Having a common database is like having a single point of failure with all conflicting changes deployed simultaneously between services.*
 
@@ -202,7 +202,7 @@ Microservices should comply with SRP (Single Responsibility Principle) and LSP (
 
 Deploying microservices in containers is important because it means you need just one tool to deploy everything. As long as the microservice is in a container, the tool knows how to deploy it. It doesn’t matter what the container is. That said, Docker seems to have become the de facto standard for containers very quickly.
 
-![image alt text](image_5.jpg)
+![image alt text](gfx/image_5.jpg)
 
 *Fig. 5: Source - Docker Blog. Docker Swarm manages the whole server cluster - automatically deploying new machines with additional instances for scalability and high availability. Of course it can be deployed on popular cloud environments like Amazon**.*
 
@@ -212,7 +212,7 @@ Treat servers, particularly those that run customer-facing code, as interchangea
 
 They all perform the same function, so you don’t need to be concerned with them individually. The role configuration across servers must be aligned and the deployment process should be fully automated.
 
-![image alt text](image_6.jpg)
+![image alt text](gfx/image_6.jpg)
 
 *Fig. 6: Original idea - Martin Fowler (https://martinfowler.com/articles/microservices.html). Scaling microservices can be efficient because you can add resources directly where needed. You don’t have to deal with storage replication, sticky sessions and all that kind of stuff because services are stateless and loosely-coupled by design.*
 
@@ -288,7 +288,7 @@ Pros & Cons of choosing an end-2-end platform:
 
 Eventually, after conducting a feasibility study, we suggested that our client use a  more optimal way of solving the problem. The fundamental assumption was to abandon migration to a new platform and change the architecture by deconstructing the current system and deploying it as an eco-system of  distributed microservices. In order to succeed, we needed an effective analysis and implementation process.
 
-![image alt text](image_7.jpg)
+![image alt text](gfx/image_7.jpg)
 
 *Fig. 7: Agile analysis and implementation process to achieve goals.*
 
@@ -356,7 +356,7 @@ Then we followed this path further, by rewriting and exchanging monolithic modul
 
 The project was finished with a roughly cut-down Magento (serving only as an application frontend) and 9 services supporting all the business logic. One day, if needed, we can simply move on from Magento, implementing a new frontend using a ReactJS/NodeJS stack or any other modern tech stack.
 
-![image alt text](image_8.jpg)
+![image alt text](gfx/image_8.jpg)
 
 *Fig. 8: Evolutionary (notrevolutionary) steps to create a new platform from a monolithic application.*
 
@@ -498,7 +498,7 @@ General flow in CQRS application:
 
 * Possible data and code duplication.
 
-![image alt text](image_9.jpg)
+![image alt text](gfx/image_9.jpg)
 
 *Fig. 9: CQRS architecture (https://martinfowler.com/bliki/images/cqrs/cqrs.png).*
 
@@ -508,7 +508,7 @@ Data stores are often designed to directly keep the actual state of the system w
 
 Event Sourcing stores all changes as a time-ordered sequence of events; each event is an object that represents a domain action from the past. All events published by the application object persist inside a dedicated, append-only data store called Event Store. This is not just an audit-log for the whole system because the main role of Event Store is to reconstruct application objects based on the history of the related events.
 
-![image alt text](image_10.jpg)
+![image alt text](gfx/image_10.jpg)
 
 *Fig. 10: Event Sourcing overview (https://docs.microsoft.com/en-us/azure/architecture/patterns/_images/event-sourcing-overview.png)*
 
@@ -536,7 +536,7 @@ Fortunately, the Event Sourcing technique has prepared solutions to these proble
 
 If the event history of the entity is long, the application may also create some snapshots. By "snapshot", I mean the state of the entity after every n-th event. The recreation phase will be much faster because there is no need to fetch all the changes from the Event Store, just the latest snapshot and further events.
 
-![image alt text](image_11.jpg)
+![image alt text](gfx/image_11.jpg)
 
 *Fig. 11: Event Sourcing with CQRS (https://pablocastilla.files.wordpress.com/2014/09/cqrs.png?w=640).*
 
@@ -584,7 +584,7 @@ The second reason to criticise microservices might be a challenge with additiona
 
 To overcome the mentioned obstacles, we can use the API Gateway approach. It means you can compile several microservices using one facade. It combines multiple responses from internal sub-services into a single response. With almost no business logic included, gateways are an easy and safe choice to optimize communication between frontend and backend or between different backend systems.
 
-![image alt text](image_12.jpg)
+![image alt text](gfx/image_12.jpg)
 
 *Fig. 12: Using an API gateway you can compose your sub-service calls into easy to understand and easy to use facades. Traffic optimization, caching and authorization are additional benefits of such an approach.*
 
@@ -592,7 +592,7 @@ The API Gateway - which is an implementation of classic Proxy patterns - can pro
 
 Additionally, you can provide common authorization layers for all services behind the gateway. For example - that’s  how Amazon API Gateway Service (NOTE:  https://aws.amazon.com/api-gateway/) + Amazon Cogito (NOTE:  http://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html) work.
 
-![image alt text](image_13.jpg)
+![image alt text](gfx/image_13.jpg)
 
 *Fig. 13: Amazon API Gateway request workflow **[https://aws.amazon.com/api-gateway/details*/](https://aws.amazon.com/api-gateway/details/)*). Amazon gateway supports caching and authorization features in spite of your web-service internals.*
 
@@ -610,7 +610,7 @@ Creating such a facade-API brings at least two benefits to your application:
 
 The diagram below shows a migration from General Purpose API to a dedicated backends for frontends approach which integrates the sub-services into logic. 
 
-![image alt text](image_14.jpg)![image alt text](image_15.jpg)
+![image alt text](gfx/image_14.jpg)![image alt text](gfx/image_15.jpg)
 
 *Fig. 14: Backend for frontends architecture is about minimizing the number of backend calls and optimizing the interfaces to a supported device.*
 
@@ -638,7 +638,7 @@ The OAuth standard works pretty similarly to OpenID. The authorization provider 
 
 Facebook or Google Account login screens are a well known part of oauth authorization.
 
-![image alt text](image_16.png)
+![image alt text](gfx/image_16.png)
 
 *Fig. 15: Authorization screen for Google Accounts to authorize external application to use Google APIs in the name of the user.*
 
@@ -646,7 +646,7 @@ After accepting the application request the authorising party returns a temporar
 
 Authorization tokens are issued for a specific amount of time and should be invalidated afterwards. Token authorization is 100% stateless; you don’t have to use sessions (like with good, old session based authorization) (NOTE:  http://stackoverflow.com/questions/7561631/oauth-2-0-benefits-and-use-cases-why). OAuth 2.0 requires SSL communication and avoids additional request-response signatures required by the previous version (requests were signed using HMAC algorithms); also, the workflow was simplified with 2.0 removing one additional HTTP request.
 
-![image alt text](image_17.jpg)
+![image alt text](gfx/image_17.jpg)
 
 *Fig. 16: Authorization flow for oauth2.*
 
@@ -692,7 +692,11 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
   </tr>
   <tr>
     <td>Signature</td>
-    <td>HMACSHA256(  base64UrlEncode(header) + "." +  base64UrlEncode(payload),  ) secret base64 encoded</td>
+    <td>HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  
+) secret base64 encoded</td>
   </tr>
 </table>
 
@@ -701,7 +705,7 @@ JWT tokens are usually passed by the HTTP Bearer header, then stored client side
 
 Once returned from authorization, service tokens can be passed to all API calls and validated server side. Because of the HMAC based signing process, tokens are safe. 
 
-![image alt text](image_18.jpg)
+![image alt text](gfx/image_18.jpg)
 
 *Fig. 17: JWT based authorization is pretty straight forward and it’s safe. Tokens can be trusted by authorized parties because of the HMAC signature; therefore information contained by them can be used without checking ACL’s and any further permissions.*
 
@@ -751,7 +755,7 @@ Before we dig into using Docker for the Microservices architecture let’s brows
 
 **Image layer** - each image is built out of layers. Images are usually built by running commands or adding/modifying files (using a Dockerfile). Each step that is run in order to build an Image is an image layer. Docker saves each layer, so when you run a build next time, it is able to reuse the layers that did not change. Layers are shared between all images so if two images start with similar steps, the layers are shared between them. You can see this illustrated below. 
 
-![image alt text](image_19.png)
+![image alt text](gfx/image_19.png)
 
 *Fig. 18: **You can use **[https://imagelayers.io*/](https://imagelayers.io/)* to analyze Docker image layers and compare them to each other. For example: ruby, python, node images share five layers - this means that if you download all three images the first 5 layers will be downloaded only once.*
 
@@ -769,7 +773,7 @@ Virtual machines work exactly as the name suggests: by creating a virtualized ma
 
 What Docker does differently is directly using the host system (no need for Hypervisor and Guest OS), it runs the containers using several features of the Linux kernel that allow them to securely separate the processes inside them. Thanks to this, a process inside the container cannot influence processes outside of it. This approach makes Docker more lightweight both in terms of CPU/Memory usage, and disk space usage.
 
-![image alt text](image_20.jpg)![image alt text](image_21.jpg)
+![image alt text](gfx/image_20.jpg)![image alt text](gfx/image_21.jpg)
 
 *Fig. 19: **Similar features, different architecture - Virtualization vs, Dockerization. Docker, leverages containerization - lightweight abstraction layer between application and the operating system / hardware. It separates the user processes but without running the whole operating system/kernel inside the container.*
 
@@ -883,7 +887,7 @@ In the next sections, we’ll use AWS Lambda for all of the examples, but the co
 
 In an FaaS approach, developers are writing code - and code only. They do not need to care about the infrastructure, deployment, scalability, etc. The code they write represents a simple and small function of the application. It is run in response to a trigger and can use external services:
 
-![image alt text](image_22.jpg)
+![image alt text](gfx/image_22.jpg)
 
 *Fig. 20: **Basic function as a service architecture consists of only two elements: the function to be run and a trigger to listen for. Usually the function is also connected to third-party services like a database.*
 
@@ -973,7 +977,7 @@ The most commonly used software that handles the whole process is Jenkins, Travi
 
 Going from the big picture, a common pipeline could look like this:
 
-![image alt text](image_23.jpg)
+![image alt text](gfx/image_23.jpg)
 
 *Fig. 21: Overview of our final Continuous Deployment pipeline.*
 
@@ -1077,7 +1081,7 @@ On top of that, Sylius is based on the highly scalable Symfony framework, which 
 
 Spryker is a "Made in Germany" eCommerce platform created with a SOA approach with separated Backend (ZED) and Frontend (YVES) applications. The platform is designed with high throughput and scalability in mind.  It’s not the classic microservices approach - you can learn more about Spryker’s founder’s view on that in Appendix 1 to this book. 
 
-![image alt text](image_24.jpg)
+![image alt text](gfx/image_24.jpg)
 
 *Fig. 22: Spryker architecture base on on Yves (frontend facade), ZED (backend services) and separated modules communicating via message queue. Source: **[http://blog.swiftcore.com/2016/03/spryker-ecommerce-platform-architecture-design.htm*l](http://blog.swiftcore.com/2016/03/spryker-ecommerce-platform-architecture-design.html)*.*
 
@@ -1091,7 +1095,7 @@ Open Loyalty leverages the CQRS and Event Sourcing design patterns. You can use 
 
 We’ve seen many cases of Open Loyalty being used as CRM and marketing automation. 
 
-![image alt text](image_25.jpg)
+![image alt text](gfx/image_25.jpg)
 
 *Fig. 23: Open Loyalty architecture - each application works as separate service. .*
 
@@ -1221,7 +1225,7 @@ One of the interesting movements in frontend-development nowadays is an Isomorph
 
 NodeJS is a popular (de facto industry standard) JavaScript engine that can be used  server-side and in CLI environments. There are plenty of JavaScript Web frameworks available, like Express ([https://expressjs.com/](https://expressjs.com/)) and HapiJS ([https://hapijs.com/](https://hapijs.com/)) - to name but two. As NodeJS is built around Google’s V8 JavaScript engine (initially developed as Chrome/Chromium JS engine) it’s blazingly fast. Node leverages the events-polling/non-blocking IO architecture to provide exceptional performance results and optimizes CPU utilization (for more, read about the c10k problem: [http://www.kegel.com/c10k.html](http://www.kegel.com/c10k.html)).
 
-![image alt text](image_26.jpg)
+![image alt text](gfx/image_26.jpg)
 
 *Fig. 24: **Node.js request flow. Node leverages Event polling and maximizing the memory and CPU usage on running parallel operations inside single threaded environment.*
 
@@ -1251,7 +1255,8 @@ Using "npm" one can install almost all available libraries and tools for the JS 
 
 **eBay**
 
-*Senthil Padmanabhan, Principal Web Engineer at eBay* (NOTE:  http://www.ebaytechblog.com/2013/05/17/how-we-built-ebays-first-node-js-application/)*: "We had two primary requirements for the project. First, was to make the application as real time as possible–i.e., maintain live connections with the server. Second, was to orchestrate a huge number of eBay-specific services that display information on the page–i.e."*
+*Senthil Padmanabhan, Principal Web Engineer at eBay* (NOTE:  http://www.ebaytechblog.com/2013/05/17/how-we-built-ebays-first-node-js-application/)*: 
+"We had two primary requirements for the project. First, was to make the application as real time as possible–i.e., maintain live connections with the server. Second, was to orchestrate a huge number of eBay-specific services that display information on the page–i.e."*
 
 Other projects that leverage NodeJS:
 
@@ -1273,17 +1278,90 @@ The editor is only one tool from the toolkit but other ones are:
 
 Everything starts with a specification file describing all the Entities and interfaces for the REST API. Please take a look at the example below:
 
-{  "get": {    "description": "Returns pets based on ID",    "summary": "Find pets by ID",    "operationId": "getPetsById",    "produces": [      "application/json",      "text/html"    ],    "responses": {      "200": {        "description": "pet response",        "schema": {          "type": "array",          "items": {            "$ref": "#/definitions/Pet"          }        }      },      "default": {        "description": "error payload",        "schema": {          "$ref": "#/definitions/ErrorModel"        }      }    }  },  "parameters": [    {      "name": "id",      "in": "path",      "description": "ID of pet to use",      "required": true,      "type": "array",      "items": {        "type": "string"      },      "collectionFormat": "csv"    }  ]}
+{
+  "get": {
+    "description": "Returns pets based on ID",
+    "summary": "Find pets by ID",
+    "operationId": "getPetsById",
+    "produces": [
+      "application/json",
+      "text/html"
+    ],
+    "responses": {
+      "200": {
+        "description": "pet response",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Pet"
+          }
+        }
+      },
+      "default": {
+        "description": "error payload",
+        "schema": {
+          "$ref": "#/definitions/ErrorModel"
+        }
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "id",
+      "in": "path",
+      "description": "ID of pet to use",
+      "required": true,
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "collectionFormat": "csv"
+    }
+  ]
+}
 
  
 
 $ref relates to other entities described in the file (data models, structures etc). You can use primitives as the examples and return values (bool, string …) as well as hash-sets, compound objects and lists. Swagger allows you to specify the validation rules and authorization schemes (basic auth, oauth, oauth2).
 
-{  "oauth2": {    "type": "oauth2",    "scopes": [      {        "scope": "email",        "description": "Access to your email address"      },      {        "scope": "pets",        "description": "Access to your pets"      }    ],    "grantTypes": {      "implicit": {        "loginEndpoint": {          "url": "http://petstore.swagger.wordnik.com/oauth/dialog"        },        "tokenName": "access_token"      },      "authorization_code": {        "tokenRequestEndpoint": {          "url": "http://petstore.swagger.wordnik.com/oauth/requestToken",          "clientIdName": "client_id",          "clientSecretName": "client_secret"        },        "tokenEndpoint": {          "url": "http://petstore.swagger.wordnik.com/oauth/token",          "tokenName": "access_code"        }      }    }  }}
+{
+  "oauth2": {
+    "type": "oauth2",
+    "scopes": [
+      {
+        "scope": "email",
+        "description": "Access to your email address"
+      },
+      {
+        "scope": "pets",
+        "description": "Access to your pets"
+      }
+    ],
+    "grantTypes": {
+      "implicit": {
+        "loginEndpoint": {
+          "url": "http://petstore.swagger.wordnik.com/oauth/dialog"
+        },
+        "tokenName": "access_token"
+      },
+      "authorization_code": {
+        "tokenRequestEndpoint": {
+          "url": "http://petstore.swagger.wordnik.com/oauth/requestToken",
+          "clientIdName": "client_id",
+          "clientSecretName": "client_secret"
+        },
+        "tokenEndpoint": {
+          "url": "http://petstore.swagger.wordnik.com/oauth/token",
+          "tokenName": "access_code"
+        }
+      }
+    }
+  }
+}
 
 Last but not least swagger the OpenAPI specification format has become more and more a standard and should be considered when starting new API projects. It’s supported by many external tools and platforms - including Amazon API Gateway (NOTE:  http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html).
 
-![image alt text](image_27.png)
+![image alt text](gfx/image_27.png)
 
 *Fig. 25: Swagger UI generates a nice-looking specification for your API along with a "try-it-out" feature for executing API calls directly from the browser.*
 
@@ -1309,15 +1387,27 @@ Widely used REST APIs are organized around HTTP endpoints. GraphQL APIs are diff
 
 Data definition:
 
-type Project {  name: String  tagline: String  contributors: [User]}
+type Project {
+  name: String
+  tagline: String
+  contributors: [User]
+}
 
 Sample query:
 
-{  project(name: "GraphQL") {    tagline  }}
+{
+  project(name: "GraphQL") {
+    tagline
+  }
+}
 
 Query result:
 
-{  "project": {    "tagline": "A query language for APIs"  }}
+{
+  "project": {
+    "tagline": "A query language for APIs"
+  }
+}
 
 GraphQL was developed internally by Facebook in 2012 and open-sourced 3 years later with Relay, a JavaScript framework for building data-driven React applications. Nowadays, the GraphQL ecosystem is growing rapidly; both server and frontend libraries are available for many programming languages and developers have dedicated tools for GraphQL API design. Many other organizations, including Github, Pinterest and Shopify are adopting GraphQL because of its benefits.
 
@@ -1343,13 +1433,13 @@ The good news is that nowadays there are plenty of tools to measure web-app perf
 
 Used by many microservice predecessors like LinkedIn, eBay, and Twilio, Graylog centralizes logs into streams.
 
-![image alt text](image_28.png)
+![image alt text](gfx/image_28.png)
 
 *Fig. 26: In graylog you’ve got access to messages in real time with alerts configured for each separate message stream.*
 
 Graylog is easy to integrate, leveraging HTTP communication, syslog (with UDP support for minimum network load) or third party log collectors like fluentd (NOTE:  http://www.fluentd.org/). It can be integrated with e-mail, SMS, and Slack alerts.
 
-![image alt text](image_29.png)
+![image alt text](gfx/image_29.png)
 
 *Fig. 27: Alerts configuration is a basic feature for providing HA to your microservices ecosystem.*
 
@@ -1363,7 +1453,7 @@ New Relic works as a system daemon with native libraries for many programming la
 
 We used to implement our own custom metrics to monitor response times from 3rd party services and integrations. Similarly to Graylog, New Relic can set up dashboards and alerts.
 
-![image alt text](image_30.png)
+![image alt text](gfx/image_30.png)
 
 *Fig. 28: The coolest feature of New Relic is stack-trace access - on production, in real time. *
 
@@ -1373,7 +1463,7 @@ Data visualization tools and customizable dashboards, allow you to observe busin
 
 By combining application, environment and business data - like transactions, pageviews and order details - into one reporting tool, you can more precisely see how your app performance affects your business.
 
-![image alt text](image_31.png)
+![image alt text](gfx/image_31.png)
 
 *Fig. 29: New Relic Insights Data Explorer with sample plot.*
 
@@ -1383,7 +1473,7 @@ You can also use the NRQL (New Relic Query Language) with syntax similar to SQL 
 
 For example, you can attach customer group IDs to order requests to check if particular customer groups have an unusually bad experience during the order process.
 
-![image alt text](image_32.png)
+![image alt text](gfx/image_32.png)
 
 *Fig. 30: New Relic usage of NRQL with sample output.*
 
@@ -1391,7 +1481,7 @@ For example, you can attach customer group IDs to order requests to check if par
 
 Another powerful feature allows you to easily detect any javascript issue on the front-end of your application. Additionally, New Relic will show you a detailed stack trace and execution profile.
 
-![image alt text](image_33.png)
+![image alt text](gfx/image_33.png)
 
 *Fig. 31: The New Relic Browser module displays a list of javascript issues on front-end application.*
 
@@ -1415,7 +1505,7 @@ There are also other examples which benefit excellently from this approach. Zala
 
 *The microservices approach is all about handling a complex system, but in order to do so the approach introduces its own set of complexities. When you use microservices you have to work on automated deployment, monitoring, dealing with failure, eventual consistency, and other factors that a distributed system introduces. There are well-known ways to cope with all this, but it’s extra effort, and nobody I know in software development seems to have acres of free time. So my primary guideline would be don’t even consider microservices unless you have a system that’s too complex to manage as a monolith.*
 
-![image alt text](image_34.png)
+![image alt text](gfx/image_34.png)
 
 Image: [http://martinfowler.com/](http://martinfowler.com/)
 
