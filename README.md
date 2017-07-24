@@ -52,17 +52,17 @@ Let’s get started!
 
 1. [Microservices](ch1-microservices.md)
  * The criticism
-2. Evolutionary approach
-3. Best practices
+2. [Evolutionary approach](ch2-evolutionary-approach.md)
+3. [Best practices](ch3-best-practices.md)
  * Create a Separate Database for Each Service
  * Rely on contracts between services
  * Deploy in Containers
  * Treat Servers as Volatile
-4. Case Studies: Re-architecting the monolith
+4. [Case Studies: Re-architecting the monolith](ch4-case-studies.md)
  * B2B
  * New approach
  * Mobile Commerce
-5. Related techniques and patterns
+5. [Related techniques and patterns](ch5-related-techniques.md)
  * Fundamentals of distributed systems
     * CAP theorem
     * Eventual consistency
@@ -93,7 +93,7 @@ Let’s get started!
  * Continuous Deployment
     * Designing deployment pipeline
     * Coding our pipeline
-6. Related technologies
+6. [Related technologies](ch6-related-technologies.md)
  * Microservices based e-commerce platforms
     * Sylius
     * Spryker
@@ -112,16 +112,8 @@ Let’s get started!
     * New Relic
     * New Relic Insights
     * New Relic Insights NRQL language
-7. Blogs and resources
-
-
-
-
-
-
-
-
-
+7. [Appendinx 1: Microservices and unicycling](ch7-microservices-and-unicycling.md)
+8. [Appendinx 2: Blogs and resources](ch8-blogs-and-resources.md)
 
 
 
