@@ -14,15 +14,15 @@ The original Zalando site was built on Magento using PHP, and at one time was th
 
 The key advantages of the micro-service approach are:
 
-* **Faster Time to Market **- because of the decentralized development process and opportunities to innovate given to each separate development team,
+* **Faster Time to Market**- because of the decentralized development process and opportunities to innovate given to each separate development team,
 
-* **Less is more **- the micro-services approach leverages the Single Responsibility Principle which means that a single microservice performs exactly one business function. Therefore developers can create more efficient, clear and testable code,
+* **Less is more**- the micro-services approach leverages the Single Responsibility Principle which means that a single microservice performs exactly one business function. Therefore developers can create more efficient, clear and testable code,
 
-* **Domain Expertise **- business features are granularly split into separate micro-applications. You’ll have separate services for promotions, checkout,  products catalog. Each development team typically includes business analysts and developers. It builds engagement and speeds up development,
+* **Domain Expertise**- business features are granularly split into separate micro-applications. You’ll have separate services for promotions, checkout,  products catalog. Each development team typically includes business analysts and developers. It builds engagement and speeds up development,
 
 * **Accountability** - Booking.com’s approach to development is to promote the teams whose features are published for production (before the features are usually proven to increase the conversion). By working on micro-services you’ll have separate teams accountable for particular KPIs, providing SLA’s for their parts etc. A side effect of this approach is usually the rise of employee effectiveness and engagement,
 
-* **Easier outsourcing **- because services are separable and usually contracts between them have to be well documented, it’s rather easy to use ready-made products or outsource particular services to other companies. 
+* **Easier outsourcing**- because services are separable and usually contracts between them have to be well documented, it’s rather easy to use ready-made products or outsource particular services to other companies. 
 
 ### The changes are too slow
 
@@ -50,7 +50,7 @@ Let’s get started!
 
 ## Table of Contents
 
-1. Microservices
+1. [Microservices](ch1-microservices.md)
  * The criticism
 2. Evolutionary approach
 3. Best practices
