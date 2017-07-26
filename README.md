@@ -1,5 +1,7 @@
 ## ![image alt text](gfx/image_0.png)
 
+*Notice:* You can download PDF version of this book from it's official landing page: http://go.divante.co/microservices-architecture-ecommerce/
+
 ## Foreword
 
 Name a technology conference or meetup and I’ll tell you about the repetitive speech referencing Micro-services. This modern engineering technique has grown from good old SOA (Service Oriented Architecture) with features like REST (vs. old SOAP) support, NoSQL databases and Event driven/reactive approach sprinkled in.
