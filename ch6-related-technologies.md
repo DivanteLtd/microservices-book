@@ -53,6 +53,12 @@ It’s a open source technology developed in Austria with a really active commun
 
 More on Pimcore: [http://pimcore.org](http://pimcore.org).
 
+#### Drupal
+
+Drupal is universal content management framework with configurable abstract entities (content, users, config entities, customers, product, orders, … anything what you specify). In version 8 it has been rewritten on top of Symfony and has universal web services API (REST in core, other protocols in contrib), so it can be used as a decoupled system where you build CMS for your use-case. There are also modules what can [send Push notifications](https://www.drupal.org/project/push_notifications) by [custom rules](https://www.drupal.org/project/rules) etc.
+
+For Drupal there is project [Drupal Commerce](http://drupalcommerce.org) what is modules ecosystem for e-commerce use cases. There is also project [Drupal Commerce Kickstart](https://drupalcommerce.org/commerce-kickstart-2) what is Drupal distrubution with "typical e-shop" configured and ready for use or customize.
+
 ### Technologies that empower the microservices architecture
 
 The microservices architecture introduces new concepts that sometimes also require new or different tools compared to the monolithic approach. Also, keeping in mind, that this approach may lead to more complexity of our platform, we should automate as many things as we can from the beginning.
