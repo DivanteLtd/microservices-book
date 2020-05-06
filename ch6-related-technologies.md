@@ -79,7 +79,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 **1. Nginx:**
 
-# in ./roles/nginx/tasks/main.yml
+##### in ./roles/nginx/tasks/main.yml
 
 - name: Ensures that nginx is installed
 
@@ -95,7 +95,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 **2. PHP:**
 
-# in ./roles/php/tasks/main.yml
+##### in ./roles/php/tasks/main.yml
 
 - name: Ensures that dotdeb APT repository is added
 
@@ -125,7 +125,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 Having these roles, we can now define a playbook that will combine them to set-up our new server with nginx and php installed:
 
-# in ./php-nodes.yml
+##### in ./php-nodes.yml
 
 - hosts: php-nodes
 
@@ -137,7 +137,7 @@ Having these roles, we can now define a playbook that will combine them to set-u
 
 The last thing we need to do is to tell Ansible the hostnames of our servers:
 
-# in ./inventory
+##### in ./inventory
 
 [php-nodes]
 
