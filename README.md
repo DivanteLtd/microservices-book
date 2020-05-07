@@ -14,7 +14,7 @@ Why have they become so important? Roughly speaking - because of what scale syst
 
 <table>
 <tr>
-   <td><a href="http://go.divante.co/microservices-architecture-ecommerce/"><img alt="The Cover" src="./vuepress/public/gfx/image_0.png" width="280"/></a></td>
+   <td><a href="http://go.divante.co/microservices-architecture-ecommerce/"><img alt="The Cover" src="https://microservicesbook.org/gfx/image_0.png" width="280"/></a></td>
    <td>
       <h4> <a href="https://microservicesbook.org">Read online</a></h4>
          <p>You can start reading right away on <a href="https://microservicesbook.org">microservicesbook.org</a></p>
