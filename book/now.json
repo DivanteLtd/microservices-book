@@ -1,4 +1,3 @@
 {
-  "name": "microservices-book",
   "routes": [{ "src": "/public", "dest": "/" }]
 }

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Microservices Architecture for eCommerce",
   "scripts": {
-    "build": "vuepress dev .",
-    "build": "vuepress build .",
-    "deploy": "yarn build && now --prod ."
+    "dev": "vuepress dev book",
+    "build": "vuepress build book",
+    "deploy": "yarn build && now book --prod ."
   },
   "repository": {
     "type": "git",
