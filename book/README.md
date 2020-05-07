@@ -133,7 +133,7 @@ Let’s get started!
 
 ### Piotr Karwatka
 
-CTO at Divante. My biggest project? Building the company from 1 -> 150+ (still growing), taking care of software productions, technology development and operations/processes. 10+ years of professional Software Engineering and Project Management experience. 
+CTO at Divante and Co-founder of <a href="https://vuestorefront.io">Vue Storefront</a>. 15+ years of professional Software Engineering and Project Management experience. Still coding in spare time.
 
 I've also tried my hand in writing with the book "E-Commerce technology for managers". My career started as a software developer and co-creator of about 30 commercial desktop and web applications.
 

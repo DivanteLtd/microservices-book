@@ -30,7 +30,7 @@ Why have they become so important? Roughly speaking - because of what scale syst
 
 ### Piotr Karwatka
 
-CTO at Divante and <a href="https://vuestorefront.io">Vue Storefront</a>. 15+ years of professional Software Engineering and Project Management experience. 
+CTO at Divante and Co-founder of <a href="https://vuestorefront.io">Vue Storefront</a>. 15+ years of professional Software Engineering and Project Management experience. Still coding in spare time.
 
 I've also tried my hand in writing with the book "E-Commerce technology for managers". My career started as a software developer and co-creator of about 30 commercial desktop and web applications.
 
