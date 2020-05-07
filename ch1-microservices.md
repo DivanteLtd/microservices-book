@@ -17,7 +17,7 @@ The most common forces dictating the Microservice approach: (NOTE:  According to
 
 * Scalability requirements that require running your application across server clusters.
 
-* Desireto adopt emerging technologies (new programming languages, etc) without major risks.
+* Desire to adopt emerging technologies (new programming languages, etc) without major risks.
 
 The assumptions of the orthogonal architecture followed by microservices architects implies the following benefits:
 
@@ -37,7 +37,7 @@ The scalability and deployment processes of microservice-based systems can be mu
 
 Dockerization of IT environments, monitoring tools and DevOps tools (Ansible, Chef, Puppet and others) can take your development team to the the next level of effectiveness.
 
-![image alt text](gfx/image_1.jpg)
+![The Cover](/gfx/image_1.jpg)
 
 *Fig. 1: A microservice approach encourages enterprises to become more agile, with cross-functional teams responsible for each service. Implementing such a company structure, as in Spotify or Netflix, can allow you to adopt and test new ideas quickly, and build strong ownership feelings across the teams.*
 

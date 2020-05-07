@@ -1,6 +1,6 @@
-## ![image alt text](gfx/image_0.png)
+![image alt text](gfx/image_0.png)
 
-*Notice:* You can download PDF version of this book from it's official landing page: http://go.divante.co/microservices-architecture-ecommerce/
+*Notice:* You can download PDF version of this book from it's [official landing page](http://go.divante.co/microservices-architecture-ecommerce/)
 
 ## Foreword
 
@@ -114,8 +114,9 @@ Let’s get started!
     * New Relic
     * New Relic Insights
     * New Relic Insights NRQL language
-7. [Appendinx 1: Microservices and unicycling](ch7-microservices-and-unicycling.md)
-8. [Appendinx 2: Blogs and resources](ch8-blogs-and-resources.md)
+7. [Enterprise GraphQL](ch7-enterprise-graphql.md)
+8. [Appendinx 1: Microservices and unicycling](ch8-microservices-and-unicycling.md)
+9. [Appendinx 2: Blogs and resources](ch9-blogs-and-resources.md)
 
 
 
