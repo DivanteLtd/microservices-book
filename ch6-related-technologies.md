@@ -5,6 +5,50 @@
 
 There are major open-source platforms that were built using the Microservices approach by design. This section tries to list those that we think could be used as a reference for designing your architecture - or even better - could be used as a part of it.
 
+### Vue Storefront
+
+Vue Storefront is a standalone PWA storefront for your eCommerce, possible to connect with any eCommerce backend (eg. Magento, commerce tools, AboutYou.cloud, Shopware6) through the API.
+
+Vue Storefront is and always will be in the open source. Anyone can use and support the project, we want it to be a tool for the improvement of the shopping experience. The project is in the production phase.
+
+![Vue Storefront Architecture](https://camo.githubusercontent.com/b1e6df3060826825655432673ab68a135c06eebd/68747470733a2f2f626c6f672e76756573746f726566726f6e742e696f2f77702d636f6e74656e742f75706c6f6164732f323032302f30332f686561646c6573735f5653465f736c6964652e706e67)
+
+It's a very popular [Open Source project](https://github.com/DivanteLtd/vue-storefront) with a strong and growing community.
+
+Key features of Vue Storefront:
+
+ - Platform-agnostic
+ - Focus on performance
+ - Mobile-first approach
+ - Cutting-edge tech
+ - No limitations in theming and customization
+ - Open Source with MIT license
+ - Exciting developer experience
+ - Out-of-the-box Server Side Rendering (for SEO)
+ - Offline mode
+
+ Read more on [https://vuestorefront.io](https://vuestorefront.io)
+
+### Storefront API
+
+Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch included. [BFF (Backend for frontend)](https://samnewman.io/patterns/architectural/bff/) driven. Works great with: Magento1, Magento2, Spree, OpenCart, and Pimcore - out of the box. [Easy to integrate with custom backends](https://docs.storefrontapi.com/guide/integration/integration.html#two-steps-for-the-integration).
+
+![Storefront API architecture](https://camo.githubusercontent.com/99f62c244a00d52c29d6cea82eac0e55d96491f6/68747470733a2f2f646976616e74652e636f6d2f2f6769746875622f73746f726566726f6e742d6170692f73746f726566726f6e742d6170692d6172636869746563747572652e706e67)
+
+You can use the Storefront GraphQL API to integrate all your backend systems with your eCommerce frontend under a single GraphQL/REST API. By default, all catalog information is stored in ElasticSearch, and all the write operations are forwarded to the platform driver (Magento1, Magento2, Spree, and others available).
+
+### Shopware 6
+
+TODO
+
+### commerce tools
+
+TODO
+
+### AboutYou.cloud
+
+TODO
+
 #### Sylius
 
 Sylius is the first Open Source eCommerce platform constructed from standalone components. What does it mean in practice? Every aspect of the shopping process is handled by individual PHP libraries. While the project itself provides a complete shop solution with a REST API, these decoupled components can be used separately to build Microservice applications.
@@ -352,6 +396,8 @@ Query result:
 }
 
 GraphQL was developed internally by Facebook in 2012 and open-sourced 3 years later with Relay, a JavaScript framework for building data-driven React applications. Nowadays, the GraphQL ecosystem is growing rapidly; both server and frontend libraries are available for many programming languages and developers have dedicated tools for GraphQL API design. Many other organizations, including Github, Pinterest and Shopify are adopting GraphQL because of its benefits.
+
+[Read more on GraphQL on production](ch7-enterprise-graphql.md)
 
 ### Distributed logging and monitoring
 
