@@ -1,7 +1,3 @@
-![image alt text](gfx/image_0.png)
-
-*Notice:* You can download PDF version of this book from it's [official landing page](http://go.divante.co/microservices-architecture-ecommerce/)
-
 ## Foreword
 
 Name a technology conference or meetup and I’ll tell you about the repetitive speech referencing Micro-services. This modern engineering technique has grown from good old SOA (Service Oriented Architecture) with features like REST (vs. old SOAP) support, NoSQL databases and Event driven/reactive approach sprinkled in.
@@ -9,6 +5,19 @@ Name a technology conference or meetup and I’ll tell you about the repetitive 
 Why have they become so important? Roughly speaking - because of what scale systems achieve nowadays and the number of changes that are deployed on a daily basis. 
 
 **This book is a rather "technical one" - starting with some Business rationale for micro-services and then stepping into engineers’ shoes and trying to show you tools and techniques required to build and scale modern eCommerce systems.**
+
+<table>
+<tr>
+   <td><a href="http://go.divante.co/microservices-architecture-ecommerce/"><img alt="The Cover" src="gfx/image_0.png" width="280"/></a></td>
+   <td>
+      <h4>Download</h4>
+         <p>You can download PDF version of this book from it's <a href="http://go.divante.co/microservices-architecture-ecommerce/">official landing page</a></p>
+      <h4>Become the author</h4>
+         <p>The Microservices Book is an ongoing project, open to new contributors.  If you'd like to become an author feel free to <a href="https://github.com/DivanteLtd/microservices-book">contribute on Github!</a></p>
+   </td>
+</tr>
+</table>
+
 
 ### Divide and conquer
 
@@ -151,3 +160,21 @@ Software developer and open source enthusiast. Core contributor to many popular 
 ### Paweł Jędrzejewski
 
 Founder and Lead Developer of Sylius, the first Open Source eCommerce framework. Currently busy building the business & ecosystem around the project while also speaking at international tech conferences about eCommerce & APIs. 
+
+
+## About Divante
+
+<a href="https://divante.com">Divante</a> is a global eCommerce solutions, experimentation, and thought leader. Our team of 250+ experts empowers eCommerce for both the B2B and B2C segments, working with companies like Bosch, SAP, Marc O'Polo and Tally Weijl. We create rapid, high-functioning MVPs and integrate technologies that will be the trends of tomorrow.
+
+At Divante, we trust in cooperation and actively contribute to the open-source community. <a href="https://github.com/DivanteLtd/microservices-book/blob/master/LICENSE">This Book is Open Source</a>.  as well as creating our own products like Vue Storefront and Open Loyalty.
+
+Divante in numbers:
+
+10+ years on the market
+100+ clients globally
+220+ team members
+300+ projects delivered
+See our key projects:
+
+Open Source projects
+Divante Innovation Lab
