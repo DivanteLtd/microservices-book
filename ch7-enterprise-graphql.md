@@ -56,7 +56,7 @@ New Relic is great for Web Applications, however, for the GraphQL you might want
  - Performance of Resolvers - to get better visibility into how to make individual resolver better,
  - Performance of individual attributes - to get better Visibility into metrics around assigning attributes in types.
 
-Actually there are not so many open source apps for digging deeper with the analytics. Probably, there is just the [query level tracing for Apollo](https://github.com/apollographql/apollo-tracing) which is open source. By using New Relic - we can set special custom events/metrics in the resolvers code or use the stack-trace tracking. Custom code, over resolvers business logic.
+Actually there are not so many open source apps for digging deeper with the analytics. Probably, there is just the [query level tracing for Apollo](https://github.com/apollographql/apollo-tracing) which is an open source. By using New Relic - we can set special custom events/metrics in the resolvers code or use the stack-trace tracking. Custom code, over resolvers business logic.
 
 ## Access Management
 

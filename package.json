@@ -1,0 +1,23 @@
+{
+  "name": "microservices-book",
+  "version": "1.0.0",
+  "description": "Microservices Architecture for eCommerce",
+  "scripts": {
+    "build": "vuepress build .",
+    "deploy": "yarn build && now --prod ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivanteLtd/microservices-book.git"
+  },
+  "author": "Divante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DivanteLtd/microservices-book/issues"
+  },
+  "homepage": "https://github.com/DivanteLtd/microservices-book#readme",
+  "dependencies": {
+    "now": "^18.0.0",
+    "vuepress": "^1.4.1"
+  }
+}
