@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vuepress dev book",
     "build": "vuepress build book",
-    "deploy": "yarn build && now book --prod ."
+    "deploy": "yarn build && now book --prod"
   },
   "repository": {
     "type": "git",
