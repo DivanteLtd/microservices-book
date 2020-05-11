@@ -58,9 +58,7 @@ Software developer and open source enthusiast. Core contributor to many popular 
 
 Founder and Lead Developer of Sylius, the first Open Source eCommerce framework. Currently busy building the business & ecosystem around the project while also speaking at international tech conferences about eCommerce & APIs. 
 
-<p style="padding-top: 15px;">
 <img src="https://divante.com/static/img/logo-new.svg" width="300" />
-</p>
 
 <a href="https://divante.com">Divante</a> is a global eCommerce solutions, experimentation, and thought leader. Our team of 250+ experts empowers eCommerce for both the B2B and B2C segments, working with companies like Bosch, SAP, Marc O'Polo and Tally Weijl. We create rapid, high-functioning MVPs and integrate technologies that will be the trends of tomorrow.
 

@@ -1,8 +1,8 @@
-## Best practices
+# Best practices
 
 This eBook is intended to show you the most popular design patterns and practices related to microservices. I strongly recommend you to track the father of the micro services approach - Sam Newman. You should check out websites like[ http://microservices.io](http://microservices.io),[ https://github.com/mfornos/awesome-microservices](https://github.com/mfornos/awesome-microservices) and[ https://dzone.com/](https://dzone.com/) (under the "microservices"” keyword). They provide a condensed dose of knowledge about core microservice patterns, decomposition methods, deployment patterns, communication styles, data management and much more…
 
-### Create a Separate Database for Each Service
+## Create a Separate Database for Each Service
 
 Sharing the same data structures between services can be difficult - particularly in environments where separate teams manage each microservice. Conflicts and surprising changes are not what you’re aiming for with a distributed approach.
 
@@ -12,7 +12,7 @@ Breaking apart the data can make information management more complicated;the ind
 
 *Fig. 4: Each microservice should have a separate database and be as self-sufficient as it can.  From a design point of view - it’s the simplest way to avoid conflicts. Remember - different teams are working on different parts of the application. Having a common database is like having a single point of failure with all conflicting changes deployed simultaneously between services.*
 
-### Rely on Contracts Between Services
+## Rely on Contracts Between Services
 
 Keep all code at a similar level of maturity and stability. When you have to modify the behaviour of a currently deployed (and stable) microservice, it’s usually better to put the new logic into a new, separate service. It’s sometimes called "immutable architecture". 
 
@@ -20,7 +20,7 @@ Another point here is that you should maintain similar, specific requirements fo
 
 Microservices should comply with SRP (Single Responsibility Principle) and LSP (Liskov Substitution Principle).
 
-### Deploy in Containers
+## Deploy in Containers
 
 Deploying microservices in containers is important because it means you need just one tool to deploy everything. As long as the microservice is in a container, the tool knows how to deploy it. It doesn’t matter what the container is. That said, Docker seems to have become the de facto standard for containers very quickly.
 
@@ -28,7 +28,7 @@ Deploying microservices in containers is important because it means you need jus
 
 *Fig. 5: Source - Docker Blog. Docker Swarm manages the whole server cluster - automatically deploying new machines with additional instances for scalability and high availability. Of course it can be deployed on popular cloud environments like Amazon**.*
 
-### Treat Servers as Volatile
+## Treat Servers as Volatile
 
 Treat servers, particularly those that run customer-facing code, as interchangeable members of a group. It’s the only way to successfully use the cloud’s "auto scaling" feature.
 

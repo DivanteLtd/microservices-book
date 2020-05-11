@@ -1,4 +1,4 @@
-## Enterprise GraphQL
+# Enterprise GraphQL
 
 GraphQL can be a perfect way to integrate different data sources. Mixing up PIM and CMS data into a single, strongly typed schema. Then - just having the Backend For Frontends (BFF) pattern implemented out of the box. Just by taking these two examples: no wonder this standard is replacing the older REST APIs. Especially when it comes to implementing headless eCommerce applications. Development experience and the performance is one thing. The other question is: how to manage the GraphQL APIs at scale?
 

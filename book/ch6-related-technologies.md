@@ -1,11 +1,11 @@
 
-## Related technologies
+# Related technologies
 
-### Microservices based e-commerce platforms
+## Microservices based e-commerce platforms
 
 There are major open-source platforms that were built using the Microservices approach by design. This section tries to list those that we think could be used as a reference for designing your architecture - or even better - could be used as a part of it.
 
-### Vue Storefront
+## Vue Storefront
 
 Vue Storefront is a standalone PWA storefront for your eCommerce, possible to connect with any eCommerce backend (eg. Magento, commerce tools, AboutYou.cloud, Shopware6) through the API.
 
@@ -29,7 +29,7 @@ Key features of Vue Storefront:
 
  Read more on [https://vuestorefront.io](https://vuestorefront.io)
 
-### Storefront API
+## Storefront API
 
 Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch included. [BFF (Backend for frontend)](https://samnewman.io/patterns/architectural/bff/) driven. Works great with: Magento1, Magento2, Spree, OpenCart, and Pimcore - out of the box. [Easy to integrate with custom backends](https://docs.storefrontapi.com/guide/integration/integration.html#two-steps-for-the-integration).
 
@@ -37,19 +37,19 @@ Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch i
 
 You can use the Storefront GraphQL API to integrate all your backend systems with your eCommerce frontend under a single GraphQL/REST API. By default, all catalog information is stored in ElasticSearch, and all the write operations are forwarded to the platform driver (Magento1, Magento2, Spree, and others available).
 
-### Shopware 6
+## Shopware 6
 
 TODO
 
-### commerce tools
+## commerce tools
 
 TODO
 
-### AboutYou.cloud
+## AboutYou.cloud
 
 TODO
 
-#### Sylius
+### Sylius
 
 Sylius is the first Open Source eCommerce platform constructed from standalone components. What does it mean in practice? Every aspect of the shopping process is handled by individual PHP libraries. While the project itself provides a complete shop solution with a REST API, these decoupled components can be used separately to build Microservice applications.
 
@@ -57,7 +57,7 @@ Let’s say we need to have two services for handling a Product Catalog and Prom
 
 On top of that, Sylius is based on the highly scalable Symfony framework, which integrates with a wide range of caching solutions, from Redis, Memcache to Varnish. It also provides tools for RAPID API development with JSON/XML support, which allows you to prototype your microservice in a much shorter timeframe and lower the costs of development.
 
-#### Spryker
+### Spryker
 
 Spryker is a "Made in Germany" eCommerce platform created with a SOA approach with separated Backend (ZED) and Frontend (YVES) applications. The platform is designed with high throughput and scalability in mind.  It’s not the classic microservices approach - you can learn more about Spryker’s founder’s view on that in Appendix 1 to this book. 
 
@@ -67,7 +67,7 @@ Spryker is a "Made in Germany" eCommerce platform created with a SOA approach wi
 
 The Spryker source code is available on Github: [https://github.com/spryker](https://github.com/spryker). The platform comes with an interesting licensing model - per developer seat (not related to revenues, servers etc…) 
 
-#### Open Loyalty
+### Open Loyalty
 
 A loyalty/rewards program that can be easily integrated with eCommerce and/or POS. It’s interesting because of the CDB module (Central Data Base) which is responsible for gathering a 360deg. view of each customer.
 
@@ -81,7 +81,7 @@ We’ve seen many cases of Open Loyalty being used as CRM and marketing automati
 
 The platform is open source and you can find the code on Github (https://github.com/DivanteLtd/open-loyalty). More information: [http://openloyalty.io](http://openloyalty.io). 
 
-#### Pimcore
+### Pimcore
 
 Pimcore is an Enterprise Content platform for:
 
@@ -97,19 +97,19 @@ It’s a open source technology developed in Austria with a really active commun
 
 More on Pimcore: [http://pimcore.org](http://pimcore.org).
 
-#### Drupal
+### Drupal
 
 Drupal is universal content management framework with configurable abstract entities (content, users, config entities, customers, product, orders, … anything what you specify). In version 8 it has been rewritten on top of Symfony and has universal web services API (REST in core, other protocols in contrib), so it can be used as a decoupled system where you build CMS for your use-case. There are also modules what can [send Push notifications](https://www.drupal.org/project/push_notifications) by [custom rules](https://www.drupal.org/project/rules) etc.
 
 For Drupal there is project [Drupal Commerce](http://drupalcommerce.org) what is modules ecosystem for e-commerce use cases. There is also project [Drupal Commerce Kickstart](https://drupalcommerce.org/commerce-kickstart-2) what is Drupal distrubution with "typical e-shop" configured and ready for use or customize.
 
-### Technologies that empower the microservices architecture
+## Technologies that empower the microservices architecture
 
 The microservices architecture introduces new concepts that sometimes also require new or different tools compared to the monolithic approach. Also, keeping in mind, that this approach may lead to more complexity of our platform, we should automate as many things as we can from the beginning.
 
 We’ll show you some of the most widely used tools and technologies that could empower your development by making things easier, more automated and are very suitable when diving into Microservices.
 
-#### Ansible
+### Ansible
 
 DevOps is an agile way to maintain software. It emphasizes communication between IT and SD (NOTE:  https://pl.wikipedia.org/wiki/DevOps).
 
@@ -123,7 +123,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 **1. Nginx:**
 
-##### in ./roles/nginx/tasks/main.yml
+#### in ./roles/nginx/tasks/main.yml
 
 - name: Ensures that nginx is installed
 
@@ -139,7 +139,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 **2. PHP:**
 
-##### in ./roles/php/tasks/main.yml
+#### in ./roles/php/tasks/main.yml
 
 - name: Ensures that dotdeb APT repository is added
 
@@ -169,7 +169,7 @@ To configure our first servers with the nginx web server and PHP, we should firs
 
 Having these roles, we can now define a playbook that will combine them to set-up our new server with nginx and php installed:
 
-##### in ./php-nodes.yml
+#### in ./php-nodes.yml
 
 - hosts: php-nodes
 
@@ -181,7 +181,7 @@ Having these roles, we can now define a playbook that will combine them to set-u
 
 The last thing we need to do is to tell Ansible the hostnames of our servers:
 
-##### in ./inventory
+#### in ./inventory
 
 [php-nodes]
 
@@ -195,7 +195,7 @@ $ ansible-playbook -i inventory php-nodes.yml -b
 
 As we defined two hosts in a "php-nodes" group, Ansible is smart enough to run the Playbook concurrently for every server. That way we’re able to make a deployment on a bigger group of machines at once without wasting time doing it one-by-one.
 
-#### ReactJS
+### ReactJS
 
 React is an open source user interface (UI) component library. It was developed at Facebook to facilitate creation of interactive web interfaces. It is often referred to as the V in the "MVC" architecture as it makes no assumptions about the rest of your technology stack. 
 
@@ -207,7 +207,7 @@ It’s most commonly used with Webpack - a module bundler for modern Javascript.
 
 One of the interesting movements in frontend-development nowadays is an Isomorphic approach. Which means that both frontend and backend are sharing the same code. In this particular case, frontend app can be created in React and backend code run by NodeJS.
 
-#### NodeJS
+### NodeJS
 
 NodeJS is a popular (de facto industry standard) JavaScript engine that can be used  server-side and in CLI environments. There are plenty of JavaScript Web frameworks available, like Express ([https://expressjs.com/](https://expressjs.com/)) and HapiJS ([https://hapijs.com/](https://hapijs.com/)) - to name but two. As NodeJS is built around Google’s V8 JavaScript engine (initially developed as Chrome/Chromium JS engine) it’s blazingly fast. Node leverages the events-polling/non-blocking IO architecture to provide exceptional performance results and optimizes CPU utilization (for more, read about the c10k problem: [http://www.kegel.com/c10k.html](http://www.kegel.com/c10k.html)).
 
@@ -225,7 +225,7 @@ On the server side, NodeJS is very often used as an API platform because of the 
 
 Using "npm" one can install almost all available libraries and tools for the JS stack - including frontend and backend packages. As most modern libraries (eg. GraphQL, Websockets) have Node bindings, and all modern cloud providers support this technology as well, it’s a good choice for backend technology backing microservices.
 
-##### Famous NodeJS users
+#### Famous NodeJS users
 
 **PayPal**
 
@@ -252,7 +252,7 @@ Other projects that leverage NodeJS:
 
 * Groupon - [http://www.datacenterknowledge.com/archives/2013/12/06/need-speed-groupon-migrated-node-js/](http://www.datacenterknowledge.com/archives/2013/12/06/need-speed-groupon-migrated-node-js/) 
 
-#### Swagger
+### Swagger
 
 This powerful tool is too commonly used only for generating nice-looking documentation for APIs. Basically, swagger is for defining the API interfaces using simple, domain-driven JSON language.
 
@@ -351,7 +351,7 @@ Last but not least swagger the OpenAPI specification format has become more and 
 
 *Fig. 25: Swagger UI generates a nice-looking specification for your API along with a "try-it-out" feature for executing API calls directly from the browser.*
 
-#### Elasticsearch
+### Elasticsearch
 
 The simplest way to start with a microservices approach in eCommerce is often to delegate the search feature to an external tool like Elasticearch / Solr or to SaaS solutions like Klevu.com.
 
@@ -365,7 +365,7 @@ Elasticsearch is even used for log analysis with tools like Kibana and Logstash 
 
 Elastic is well supported by cloud providers like Amazon and supports Docker.
 
-#### GraphQL
+### GraphQL
 
 Modeling a great REST API is hard - using and supporting changes in an API over time is sometimes even harder. GraphQL (http://graphql.org) is a query language; a proposition to a new way of thinking about APIs.
 
@@ -399,11 +399,11 @@ GraphQL was developed internally by Facebook in 2012 and open-sourced 3 years la
 
 [Read more on GraphQL on production](ch7-enterprise-graphql.md)
 
-### Distributed logging and monitoring
+## Distributed logging and monitoring
 
 Distributed systems require new levels of application monitoring and logging. With monolithic applications you can track one log-file for events (usually) and use some Zabbix triggers to get a complete view of a server's state, application errors, etc.
 
-#### Graylog
+### Graylog
 
 With distributed services you have to track a whole bunch of new metrics:
 
@@ -433,7 +433,7 @@ Graylog is easy to integrate, leveraging HTTP communication, syslog (with UDP su
 
 One can configure customized dashboards and charts for Graylog to track the performance in near-real time. Graylog is open source with an optional Enterprise version.
 
-#### New Relic
+### New Relic
 
 Whereas Graylog is focused around application logging, New Relic is centered around the performance and numeric metrics of your applications and servers: network response times, CPU load, HTTP response times, network graphs, as well as application stack traces with debugging information.
 
@@ -445,7 +445,7 @@ We used to implement our own custom metrics to monitor response times from 3rd p
 
 *Fig. 28: The coolest feature of New Relic is stack-trace access - on production, in real time. *
 
-##### New Relic Insights
+#### New Relic Insights
 
 Data visualization tools and customizable dashboards, allow you to observe business analytics data and performance information at the same time.
 
@@ -455,7 +455,7 @@ By combining application, environment and business data - like transactions, pag
 
 *Fig. 29: New Relic Insights Data Explorer with sample plot.*
 
-##### New Relic Insights NRQL language
+#### New Relic Insights NRQL language
 
 You can also use the NRQL (New Relic Query Language) with syntax similar to SQL language to explore all collected data and create application metric reports.
 

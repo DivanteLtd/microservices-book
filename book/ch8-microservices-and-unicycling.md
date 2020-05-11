@@ -1,4 +1,4 @@
-## Appendix 1: Microservices and unicycling by Alexander Graf
+# Appendix 1: Microservices and unicycling by Alexander Graf
 
 Thanks to Alexander Graf, the founder of Spryker.com for this part. Initially published as a blog post on Alexanders’ blog: [https://tech.spryker.com/microservices-and-unicycling-9ed452998b77](https://tech.spryker.com/microservices-and-unicycling-9ed452998b77) 
 

@@ -1,12 +1,12 @@
-## Related Techniques and Patterns
+# Related Techniques and Patterns
 
 This eBook is intended to give you a quick-start, practical overview of the microservices approach. I believe, once interested in the topic, you can find additional sources to dig into. In this chapter I would like to mention just a few programming techniques and design patterns which have become popular with microservices gaining the spotlight. We want to cover the full scope of building microservices and tools that can be particularly useful to that goal.
 
-### Fundamentals of distributed systems
+## Fundamentals of distributed systems
 
 The microservices architecture assumes the high distribution of our services. That introduces new categories of issues that may not even exist with monolithic approaches. There are two major theories that should be understood before diving deep into this new architecture.
 
-#### CAP theorem
+### CAP theorem
 
 Also called "Brewer theorem" after Eric Brewer, states that,  for distributed systems it’s not possible to provide more than two of the following three guarantees:
 
@@ -26,7 +26,7 @@ When the system is running normally - both availability and consistency can be p
 
 Traditional database systems (compliant with ACID (NOTE:  https://en.wikipedia.org/wiki/ACID)) prefer consistency over availability. 
 
-#### Eventual consistency
+### Eventual consistency
 
 It’s not a programming technique but rather something you have to think about when designing distributed systems. This consistency model is connected directly to the CAP theorem and informally guarantees that if** no new updates are made to a given data item, eventually all access to that item will return the last updated value**.
 
@@ -40,11 +40,11 @@ To achieve eventual consistency, the distributed system must resolve data confli
 
 The widespread model for choosing the final state is "last writer wins" - achieved by including an update timestamp along with an updated copy of data.
 
-### Design patterns
+## Design patterns
 
 Having knowledge of the core theories that underpin the issues which we may encounter when developing and designing a distributed architecture, we can now go into higher-level concepts and patterns. Design patterns are techniques that allow us to compose code of our microservices in a more structured way and facilitate further maintenance and development of our platform.
 
-#### CQRS
+### CQRS
 
 CQRS means Command-Query Responsibility Segregation. The core idea behind CQRS is the extension of the CQS concept by Bertrand Meyer, where objects have two types of methods. Command methods perform actions in systems and always return nothing, query methods return values and they have no effect on the system.
 
@@ -82,7 +82,7 @@ General flow in CQRS application:
 
 *Fig. 9: CQRS architecture (https://martinfowler.com/bliki/images/cqrs/cqrs.png).*
 
-#### Event Sourcing
+### Event Sourcing
 
 Data stores are often designed to directly keep the actual state of the system without storing the history of all the submitted changes. In some situations this can cause problems. For example, if there is a need to prepare a new read model for some specific point of time (like your current address on an invoice from 3 months ago - which may have changed in the meantime - and you haven’t stored the time-stamped data snapshots, it will be a big deal to reprint or modify the correct document).
 
@@ -136,7 +136,7 @@ Event Sourcing works very well with CQRS and Event Storming, a technique for dom
 
 * Eventually consistent model.
 
-#### Event driven data management
+### Event driven data management
 
 Microservices should be coupled as loosely as possible, It should be possible to develop, test, deploy and scale them independently. Sometimes an application should even be able to work without particular services (to comply with HA - high availability)… To achieve these requirements, each microservice should have a separate data store. Sounds easy - but what about the data itself? How to spread the information changes between services? What about consistency within the data?
 
@@ -150,13 +150,13 @@ Spreading data across multiple separated data stores and achieving consistency u
 
 In some situations, when a new microservice is introduced, there is a need to seed the database. If there is a chance to use data directly from different „sources of truth", it’s probably the best way to setup a new service. But other microservices may also expose feeds of theirs events, for example in the form of ATOM feeds. New microservices may process them in chronological order, to compile the  final state of new data stores. Of course, in this scenario each microservice should keep a history of all events, which can sometimes  be a subsequent challenge.
 
-### Integration techniques
+## Integration techniques
 
 System integration is key to developing efficient microservices architecture. Services must talk to each other in a consistent way. The overall structure of a platform could be easily discoverable by hiding all of the dependencies behind facades like a common API gateway.
 
 Moreover, all of that communication should use authentication mechanisms as microservices are commonly exposed to the outside world. They should not be designed with the intention of residing only in our firewall-protected network. We show two possible ways of making our integration secure by using token based techniques such as OAuth2 and JWT.
 
-#### API Gateways
+### API Gateways
 
 With the microservices approach, it’s quite easy to make internal network communication very talkative. Nowadays, when 10G network connections are standard in data-centers, there may be nothing wrong with that. But when it comes to communication between your mobile app and backend services, you might want to compress as much information as possible into one request.
 
@@ -178,7 +178,7 @@ Additionally, you can provide common authorization layers for all services behin
 
 Swagger (NOTE:  https://swaggerhub.com/blog/swaggerhub-feature/swagger-amazon-api-gateway-and-lambda/) can help you, once a Gateway has been built, with direct integration and support to Amazon services.
 
-#### Backend for Frontends
+### Backend for Frontends
 
 A typical example of an API Gateway is the backend for frontends (BFF) pattern. It is about facades and compiling several microservices into optimized / device or channel-oriented API services. Its microservice design pattern was proposed by Sam Newman of Thought Works (author of "Building Microservices"): to create single purpose edge APIs for frontends and other parties.
 
@@ -208,7 +208,7 @@ Let me quote a conclusion on BFF presented by Sam Newman himself:
 
 *Backends For Frontends solve a pressing concern for mobile development when using microservices. In addition, they provide a compelling alternative to the general-purpose API backend, and many teams make use of them for purposes other than just mobile development. The simple act of limiting the number of consumers they support makes them much easier to work with and change, and helps teams developing customer-facing applications retain more autonomy.* (NOTE:  http://samnewman.io/patterns/architectural/bff/)
 
-#### Token based authorization (oauth2, JWT)
+### Token based authorization (oauth2, JWT)
 
 Authorization is a key feature of any enterprise grade application. If you remember the beginnings of web 2.0 and Web API’s back then, a typical authorization scenario was based on an API key or HTTP authorization. With ease of use came some strings  attached. Basically these "static" (API key) and not strongly encrypted (basic auth.) methods were not secure enough.
 
@@ -236,7 +236,7 @@ There is usually no need to rewrite your own OAuth code as many open source libr
 
 There are SaaS solutions for identity and authorization, such as Amazon Cogito (NOTE:  https://aws.amazon.com/cognito/) or Auth0 (NOTE:  https://auth0.com/how-it-works) that can be easily used to outsource the authorization of your API’s.
 
-#### JSON Web Tokens (JWT)
+### JSON Web Tokens (JWT)
 
 Yet another approach to token based authorization is JWT (NOTE:  https://jwt.io/) (JSON Web Tokens). They can be used for stateless claim exchange between parties. As OAuth tokens require validation by the authenticating party between all requests - JSON Web Tokens are designed to self-contain all information required and can be used without touching the database or any other data source.
 
@@ -274,8 +274,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
     <td>Signature</td>
     <td>HMACSHA256(
   base64UrlEncode(header) + "." +
-  base64UrlEncode(payload),
-  
+  base64UrlEncode(payload), 
 ) secret base64 encoded</td>
   </tr>
 </table>
@@ -289,15 +288,11 @@ Once returned from authorization, service tokens can be passed to all API calls 
 
 *Fig. 17: JWT based authorization is pretty straight forward and it’s safe. Tokens can be trusted by authorized parties because of the HMAC signature; therefore information contained by them can be used without checking ACL’s and any further permissions.*
 
-### Deployment of microservices
+## Deployment of microservices
 
-If done wrong, microservices may come with an overhead of operational tasks needed for 
+If done wrong, microservices may come with an overhead of operational tasks needed for the deployments and maintenance. When dividing a monolithic platform into smaller pieces, each of them should be easy to deploy in an automatic way. Nowadays, we see two main concepts that facilitates such a process - containerization and serverless architecture.
 
-the deployments and maintenance. When dividing a monolithic platform into smaller pieces, each of them should be easy to deploy in an automatic way. Nowadays, we see two main concepts that facilitates such a process - containerization and serverless architecture.
-
- 
-
-#### Docker and containerization
+### Docker and containerization
 
 If you are not familiar with containerization, then here are the most common benefits that make it worth digging deeper into this concept:
 
@@ -325,7 +320,7 @@ This might sound familiar: virtualization allows you to achieve pretty much the 
 
 Docker achieves this using the isolation features of the Linux kernel such as Cgroups and kernel namespaces. Each container has its own process space, filesystem and memory.  You can run all kinds of Linux distributions inside a container. What makes Docker really useful is the community and all projects that complement the main functionality. There are multiple tools to automate common tasks, orchestrate and scale containerized systems. Docker is also heavily supported by many companies, just to name a couple: Amazon, Google, Microsoft. Currently, Docker also allows us to run Windows inside containers (only on Windows hosts).
 
-##### Docker basics
+#### Docker basics
 
 Before we dig into using Docker for the Microservices architecture let’s browse the top-level details of how it works.
 
@@ -345,7 +340,7 @@ As you can see, all compared images share common layers. So if you download one 
 
 **Orchestration (docker-compose)** - usually a system is built of several or more containers. This is because you should have only one concern per container. Orchestration allows you to run a multi-container application much easier and docker-compose is the most commonly used tool to achieve that. It has the ability to run multiple containers that can be connected with networks and share volumes.
 
-##### VM vs. Container
+#### VM vs. Container
 
 As mentioned earlier, Docker might seem similar to virtual machines but works in an entirely different way.  
 
@@ -357,11 +352,11 @@ What Docker does differently is directly using the host system (no need for Hype
 
 *Fig. 19: **Similar features, different architecture - Virtualization vs, Dockerization. Docker, leverages containerization - lightweight abstraction layer between application and the operating system / hardware. It separates the user processes but without running the whole operating system/kernel inside the container.*
 
-##### From dev to production
+#### From dev to production
 
 Ok, so we have the technical introduction covered. Now let’s see how Docker helps to build, run and maintain a Microservice oriented application.
 
-##### Development
+#### Development
 
 Development is usually the first phase where Docker brings some extra value, and it is even more helpful with Microservice oriented applications. As mentioned earlier, Docker comes with tools that allow us to orchestrate a multi-container setup in a very easy way. Let's take a look at the benefits docker brings during development.
 
@@ -399,7 +394,7 @@ Docker is a solution that allows one configuration to be run everywhere. You can
 
 Now that you have a working development setup, configuring a CI is really easy. You just need to setup your CI to run the same *docker-compose up* command and then run your tests, etc. No need to write any special configuration; just bring the containers up and run your tests. I've worked with different CI servers like Gitlab CI, Circle CI, Jenkins and the setup was always quick and easy. If some tests fail, it is easy to debug too. Just run the tests locally.
 
-##### Pre-production
+#### Pre-production
 
 When you have your development setup up and running, it is also quite easy to push your application to a staging server. In most projects I know, this process was pretty straight-forward and required only a few changes. The main difference is in the so called volumes - files/directories that are shared between your local disk and the disk inside a container. When developing an application, you usually setup containers to share all project files with Docker so you do not need to rebuild the image after each change. On pre-production and production servers, project files should live inside the container/image and should not be mounted on your local disk. 
 
@@ -407,21 +402,21 @@ The other common change applies to ports. When using Docker for development, you
 
 There are many tools that make running pre-production servers much easier. You should definitely check out projects like Docker Swarm, Kubernetes and Rancher. I really like Rancher as it is easy to setup and really easy to use.  We use Rancher as our main staging management tool and all co-workers really enjoy working with it. Just to give you a small insight into how powerful such tools are: all our team members are able to update or create a new staging environment without any issues - and within a few minutes!
 
-##### Production
+#### Production
 
 The production configuration should be exactly the same as pre-production. The only small difference might be the tool you use to manage the containers. There are a multitude of popular tools used to run production containers but my two favorites are Amazon EC2 Container Service and Google Cloud with Kubernetes on top.  Both tools allow you to scale easily on new hosts
 
 One important thing you should keep in mind when going with Docker on production - monitoring and logging. Both should be centralized and easy to use. 
 
-##### Cons
+#### Cons
 
 Docker has some downsides too. The first one you might notice is that it takes some time to learn how to use Docker. The basics are pretty easy to learn, but it takes time to master some more complicated settings and concepts. The main disadvantage for me is that it runs very slowly on MacOS and Windows. Docker is built around many different concepts from the Linux kernel so it is not able to run directly on MacOS or Windows. It uses a Virtual Machine that runs Linux with Docker. 
 
-##### Summary
+#### Summary
 
 Docker and the Microservice architecture approach work very well together and both concepts gain popularity each year. Over the past 4 years, we have been able to observe how Docker has gotten better and more mature with each release. At the same time, the whole ecosystem has grown and new tools have been published giving us more possibilities that we could not have thought of. By using Docker, we are able to easily run our Microservice oriented applications on our developer machines and then run the same setup on pre- and production servers. Right now we can configure a setup within minutes and then release our application to a server also within minutes.  I'm really curious about what new possibilities we will get in the coming months.
 
-#### Serverless - Function as a Service
+### Serverless - Function as a Service
 
 Serverless is not exclusively bound to microservice oriented applications but it is definitely good to know this concept, as it might be helpful in many cases. Let me start with a couple of quotes that might be helpful for you to understand what serverless is about:
 
@@ -447,7 +442,7 @@ Serverless is considered to be a very bad name for what we are talking about. Th
 
 In the context of microservice architecture, FaaS is the concept that is interesting for us.
 
-##### Serverless providers
+#### Serverless providers
 
 Currently, there are 4 major Clouds that allow us to use serverless architecture. 
 
@@ -463,13 +458,13 @@ Although it seems that we have a choice, we must keep in mind that commonly, suc
 
 In the next sections, we’ll use AWS Lambda for all of the examples, but the core concepts remain the same across all of the serverless providers.
 
-##### FaaS
+#### FaaS
 
 In an FaaS approach, developers are writing code - and code only. They do not need to care about the infrastructure, deployment, scalability, etc. The code they write represents a simple and small function of the application. It is run in response to a trigger and can use external services:
 
 ![image alt text](gfx/image_22.jpg)
 
-*Fig. 20: **Basic function as a service architecture consists of only two elements: the function to be run and a trigger to listen for. Usually the function is also connected to third-party services like a database.*
+*Fig. 20: Basic function as a service architecture consists of only two elements: the function to be run and a trigger to listen for. Usually the function is also connected to third-party services like a database.*
 
 A trigger can be almost anything. Based on AWS Lambda, the most popular FaaS service, the trigger might be:
 
@@ -503,7 +498,7 @@ Internally, functions are run in small, ephemeral and stateless containers that 
 
 You can find an interesting cost comparison to EC2 instances here : https://www.trek10.com/blog/lambda-cost/
 
-##### Architecture
+#### Architecture
 
 I won’t describe the architecture details of a serverless application in this article as it should be quite straightforward when writing a microservice application. The obvious and required step is to move as much presentation and logic to the customer as possible. Usually, your application front-end should be a mobile app or a single-page app. 
 
@@ -511,17 +506,17 @@ On the back-end, you can start with a very simple architecture where the functio
 
 You can also use FaaS to implement batch processing: split the stream of data into smaller chunks and then send them to another function that will run multiple instances of itself simultaneously. This allows you to process the data much faster. FaaS is often used to do real-time log processing.
 
-##### It’s easy!
+#### It’s easy!
 
 Just a quick „hello world" example to show you how easily you can start writing serverless applications:
 
-*exports.handler = (event, context, callback) => {*
+```js
+exports.handler = (event, context, callback) => {*
+    callback(null, 'Hello World');*
+};
+```
 
-*    callback(null, 'Hello World');*
-
-*};*
-
-##### Summary
+#### Summary
 
 **Benefits**
 
@@ -531,7 +526,7 @@ FaaS is easy to learn and implement, and it allows you to reduce the time to mar
 
 There might be a small vendor lock-in if you do not take this into consideration and do not introduce proper architecture. You should be aware of the communication overhead that is added by splitting the app into such small services. The most common issues mentioned are multitenancy (the same issue as with running containers on Amazon) and cold start - when scaling up, it takes some time to handle the first request by a new container. It might also be a bit harder to test such an application.
 
-##### Good use-cases
+#### Good use-cases
 
 Here are some use-cases that are interesting in my opinion:
 
@@ -545,7 +540,7 @@ Here are some use-cases that are interesting in my opinion:
 
 * Other cases when your application is not fully using the server capacity or you need to add scalability without investing much time and money.
 
-#### Continuous Deployment
+### Continuous Deployment
 
 Just imagine that each of your microservices needs to be first built and then deployed manually, not even mentioning running unit tests or any kind of code-style tools. Having tens of those would be extremely time-consuming and would often be a major bottleneck in the whole development process.
 
@@ -553,7 +548,7 @@ Here comes the idea of Continuous Deployment - the thing that puts the workflow 
 
 The most commonly used software that handles the whole process is Jenkins, Travis CI, Bamboo or CircleCI. We’ll show you how to do it using Jenkins.
 
-##### Designing deployment pipeline
+#### Designing deployment pipeline
 
 Going from the big picture, a common pipeline could look like this:
 
@@ -577,7 +572,7 @@ Most of the hard work is done by that nice looking guy, called *Jenkins*. When s
 
 After all this, we can set up a Slack notification that will inform us of success or failure of the whole process. The important thing is, that we should keep our Jenkins instance clean, so running all of the unit tests should be done inside a Docker container.
 
-##### Coding our pipeline
+#### Coding our pipeline
 
 Once we have the idea of our build process, we can code it using the *Jenkinsfile*. It’s a file that describes our whole deployment pipeline. It consists of stages and build steps. Mostly, at the end of the pipeline we include *post* actions that should be fired when the build was successful or failed.
 
@@ -585,60 +580,33 @@ We should keep this file in our application’s code repository - that way devel
 
 Here is a sample Jenkinsfile built on the basis of the previously mentioned steps. As we can see, the final step is to run another Jenkins job named *deploy*. Jobs can be tied together to be more reusable - that way we can deploy our application without having to run all of the previous steps.
 
-#!groovy
-
+```groovy
 pipeline {
-
     agent any
-
     stages {
-
         stage('Build Docker') {
-
             steps {
-
                 sh "docker build ..."
-
             }
-
         }
-
         stage('Push Docker Image') {
-
             steps {
-
                 sh 'docker push ...'
-
             }
-
         }
-
         stage('Deploy') {
-
             steps {
-
                 build job: 'deploy'
-
             }
-
         }
-
     }
-
     post {
-
         success {
-
             slackSend color: 'good', message: "Build Success"
-
         }
-
         failure {
-
             slackSend color: 'danger', message: "Build Failed"
-
         }
-
     }
-
 }
+```

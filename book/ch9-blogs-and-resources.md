@@ -1,4 +1,4 @@
-## Appendix 2: Blogs and resources
+# Appendix 2: Blogs and resources
 
 There are plenty of websites, blogs and books you can check to read more about microservices and related architectural patterns. The book "Building Microservices, Designing Fine-Grained Systems" by Sam Newman and O’Reilly Media ([http://shop.oreilly.com/product/0636920033158.do](http://shop.oreilly.com/product/0636920033158.do)) should be at the top of the top of your list. The most important information has been collected into one place. It is all you need to know to model, implement, test and run new systems using microservices or transform the monolith into a distributed set of smaller applications. A must-have book for every software architect. O’Reilly Media has also released another interesting book, “Microservice Architecture” by Irakli Nadareishvili, Ronnie Mitra, Matt McLarty and Mike Amundsen ([http://shop.oreilly.com/product/0636920050308.do](http://shop.oreilly.com/product/0636920050308.do)), which is also worth a read.
 

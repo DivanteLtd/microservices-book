@@ -1,5 +1,5 @@
 
-## Microservices
+# Microservices
 
 Microservice architecture structures the application as a set of loosely coupled, collaborating services. Each service implements a set of related functions. For example, an application might consist of services such as an order management service, an inventory management service, etc.
 
@@ -41,7 +41,7 @@ Dockerization of IT environments, monitoring tools and DevOps tools (Ansible, Ch
 
 *Fig. 1: A microservice approach encourages enterprises to become more agile, with cross-functional teams responsible for each service. Implementing such a company structure, as in Spotify or Netflix, can allow you to adopt and test new ideas quickly, and build strong ownership feelings across the teams.*
 
-### The criticism
+## The criticism
 
 The microservice approach is subject to criticism for a number of issues:
 

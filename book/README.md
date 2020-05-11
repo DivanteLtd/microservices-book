@@ -126,6 +126,7 @@ Let’s get started!
 7. [Enterprise GraphQL](ch7-enterprise-graphql.md)
 8. [Appendinx 1: Microservices and unicycling](ch8-microservices-and-unicycling.md)
 9. [Appendinx 2: Blogs and resources](ch9-blogs-and-resources.md)
+10. [Appendinx 3: From Magento1 to Headless eCommerce. Interview with Halil Köklü](ch10-migrating-towards-headless.md)
 
 
 
