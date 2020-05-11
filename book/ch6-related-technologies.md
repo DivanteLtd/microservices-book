@@ -5,9 +5,9 @@
 
 There are major open-source platforms that were built using the Microservices approach by design. This section tries to list those that we think could be used as a reference for designing your architecture - or even better - could be used as a part of it.
 
-## Vue Storefront
+### Vue Storefront
 
-Vue Storefront is a standalone PWA storefront for your eCommerce, possible to connect with any eCommerce backend (eg. Magento, commerce tools, AboutYou.cloud, Shopware6) through the API.
+Vue Storefront is a standalone PWA storefront for your eCommerce, possible to connect with any eCommerce backend (eg. Magento, commercetools, AboutYou.cloud, Shopware6) through the API.
 
 Vue Storefront is and always will be in the open source. Anyone can use and support the project, we want it to be a tool for the improvement of the shopping experience. The project is in the production phase.
 
@@ -27,9 +27,13 @@ Key features of Vue Storefront:
  - Out-of-the-box Server Side Rendering (for SEO)
  - Offline mode
 
+ ![Vue Storefront Next with commercetools](https://blog.vuestorefront.io/wp-content/uploads/2020/03/3-views-Vue-Storefront-.png)
+
+ Vue Storefront Next is based on [StorefrontUI design system](http://storefrontui.io/) implementing the best - Google Retail Playbook practices.
+
  Read more on [https://vuestorefront.io](https://vuestorefront.io)
 
-## Storefront API
+### Storefront API
 
 Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch included. [BFF (Backend for frontend)](https://samnewman.io/patterns/architectural/bff/) driven. Works great with: Magento1, Magento2, Spree, OpenCart, and Pimcore - out of the box. [Easy to integrate with custom backends](https://docs.storefrontapi.com/guide/integration/integration.html#two-steps-for-the-integration).
 
@@ -37,17 +41,64 @@ Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch i
 
 You can use the Storefront GraphQL API to integrate all your backend systems with your eCommerce frontend under a single GraphQL/REST API. By default, all catalog information is stored in ElasticSearch, and all the write operations are forwarded to the platform driver (Magento1, Magento2, Spree, and others available).
 
-## Shopware 6
+### Shopware 6 with Shopware-PWA
 
-TODO
+Shopware 6 is the next generation of open-source eCommerce software based on bleeding-edge technologies powered by Symfony and Vue.js. Focused on an API-first approach, Shopware provides more flexibility and less complexity. 
 
-## commerce tools
+It's a modern, cloud-native eCommerce platform designed to launch the international eCommerce sites with a very short time to market. The platform has been rewritten - so there is nothing to compare between Shopware5 and Shopware6. It can be hosted on premise as well (and customized using the extensive modularity features). The platform offers a full CMS driven page design (you can customize any type of page using WYSIWYG editors). The cool part is that these content chunks are available thru API which makes it easy to integrate the content within third party products and frontends.
 
-TODO
+Shopware-PWA is an implementation of [Vue Storefront Next](https://blog.vuestorefront.io/behind-the-scenes-of-building-shopware-pwa/) for Shopware.  Headless storefront solution for Shopware 6, which communicates through the SalesChannel-API. Always Open Source, MIT license.
 
-## AboutYou.cloud
+![Shopware PWA architecture](https://blog.vuestorefront.io/wp-content/uploads/2020/01/TVSJ-Shopware-PWA-2.png)
 
-TODO
+**Patryk Tomczyk** - Shopware PWA team leader and Vue Storefront Core Team member:
+
+Since the very beginning of Vue Storefront, we’ve held on the dream that no matter which backend is being used, the developer experience of creating a PWA shop with Vue Storefront is the same.
+
+First, we wanted to take care of a common data structure. In the first version, the structure of entities was obviously Magento-like. The goal was to create a whole new data structure, but we gave up this idea very quickly, and there are a few reasons why:
+
+It would require developers from all platforms to learn new data structures and have in mind which field is which (if you’re used to Shopware structure, you should be able to use it).
+
+Every integration would require writing this mapping; there would be no possibility to use clean backend API without Vue Storefront API middleware
+We didn’t want people to spend additional time on data synchronization: mapping, storage on search engines, setting up cron jobs… That works well for Magento when looking to enhance performance, but why bother when you have a fast-enough API?
+
+There was always something important in the structure which could be missing especially with new integrations and fixing than on this point… You know how that story ends :)
+With the Shopware 6 integration (and the subsequent CommerceTools integration that we started at almost the same time), we came up with a bold idea to take us closer to our dream scenario. We decide to create a whole and complete set of interfaces and helpers which allow for the running eCommerce sites in a common way, not interfering with the backend entities schema.
+
+### commercetools + Vue Storefront Next
+
+commercetools is a first headless eCommerce platform. Unlike other competitors which have been on the market some time, commercetools firmly believed in the headless approach from the very beginning. The commercetools developers didn't even bother building a downloadable piece of software, forcing customers to install it on their own. Instead, they created an entirely cloud-hosted eCommerce and powerful API. All of this enables users to get access to the platform without worrying about any infrastructure-related issues; it’s enough to create an account and then freely integrate your store with any third-party tools.
+
+It offers 300+ API endpoints you can use to build the customer experience. The APIS can be used a'la carte - like for example Amazon Web Services or Google platform. Some of the most important modules the platform offers:
+
+![commercetools architecture](https://commercetools.com/wp-content/uploads/2018/07/commercetools-api-platform-detail.png)
+
+#### commercetools Merchant Center
+
+The commercetools Merchant Center helps you handle your most critical data and processes while keeping up with changing market conditions. Its intuitive user interface lets you manage product data, orders, and customer data for all retail channels. Additional functions, such as configurable forms and batch processing, help you to quickly and easily complete your daily tasks.
+
+#### PIM
+
+commercetools has an advanced Product Information Management (PIM) already built in natively – no installation or integration required. Simply log into our web app and take control of your catalog data, add new attributes, bulk edit variants and maintain all of your retail channels.
+
+![commercetools PIM](https://commercetools.com/wp-content/uploads/2018/07/mc-pim-800x481.png)
+
+The Promotion builder interface can be used to model complex product/cart-level discounts and coupon codes.  Rules can be exported in a friendly text-based format, allowing for templatized discounts to be quickly created.
+
+#### Discounts / pricing engine
+
+![commercetools discounts](https://commercetools.com/wp-content/uploads/2018/07/mc-discounts-800x481.png)
+
+#### PWA Accelerator
+
+This integration gives you a fully-functional headless Progressive Web App based on the most popular eCommerce frontend framework -  Vue Storefront. 
+
+The shop will be connected to your commercetools instance and covers all standard features of commercetools. Under the hood, Vue Storefront is using Nuxt.js that provides best-in-class Server-Side-Rendering experience great performance and hundreds of ready to use community modules.
+
+![commercetools plus Vue Storefront architecture](https://blog.vuestorefront.io/wp-content/uploads/2020/03/commercetools-headless-architecture.png)
+
+Read more on [commercetools accelerator](https://blog.vuestorefront.io/vue-storefront-accelerating-enterprise-commerce-initiatives-with-commercetools/)
+
 
 ### Sylius
 
@@ -121,77 +172,62 @@ There’re plenty of well-written, already made Playbooks that you could adapt a
 
 To configure our first servers with the nginx web server and PHP, we should first create two roles that will be next used in a final Playbook.
 
-**1. Nginx:**
+#### 1. Nginx:
 
-#### in ./roles/nginx/tasks/main.yml
+##### in ./roles/nginx/tasks/main.yml
 
+```yaml
 - name: Ensures that nginx is installed
-
   apt: name=nginx state=present
-
 - name: Creates nginx configuration from Jinja template file
-
   template:
-
     src: "/etc/nginx/nginx.conf.j2"
-
     dest: "/etc/nginx/nginx.conf"
+```
 
-**2. PHP:**
+#### 2. PHP:
 
-#### in ./roles/php/tasks/main.yml
+##### in ./roles/php/tasks/main.yml
 
+```yaml
 - name: Ensures that dotdeb APT repository is added
-
   apt_repository: repo="deb http://packages.dotdeb.org jessie all" state=present
-
- 
-
 - name: Ensures that dotdeb key is present
-
   apt_key: url=https://www.dotdeb.org/dotdeb.gpg state=present
-
 - name: Ensures that APT cache is updated
-
   apt: update_cache=yes
-
 - name: Ensures that listed packages are installed
-
   apt: pkg="{{ item }}"
-
   with_items:
-
     - php7.0-cli
-
     - php7.0-curl
-
     - php7.0-fpm
+```
 
 Having these roles, we can now define a playbook that will combine them to set-up our new server with nginx and php installed:
 
-#### in ./php-nodes.yml
+##### in ./php-nodes.yml
 
+```
 - hosts: php-nodes
-
   roles:
-
     - nginx
-
     - php
+```
 
 The last thing we need to do is to tell Ansible the hostnames of our servers:
 
-#### in ./inventory
+##### in ./inventory
 
+```ini
 [php-nodes]
-
 php-node1.acme.org
-
 php-node2.acme.org
+```
 
 Deployment is now as easy as typing a single shell command that will tell Ansible to run the *php-nodes.yml* playbook on hosts from the *inventory* file as root (-b):
 
-$ ansible-playbook -i inventory php-nodes.yml -b
+`$ ansible-playbook -i inventory php-nodes.yml -b`
 
 As we defined two hosts in a "php-nodes" group, Ansible is smart enough to run the Playbook concurrently for every server. That way we’re able to make a deployment on a bigger group of machines at once without wasting time doing it one-by-one.
 
@@ -264,6 +300,7 @@ The editor is only one tool from the toolkit but other ones are:
 
 Everything starts with a specification file describing all the Entities and interfaces for the REST API. Please take a look at the example below:
 
+```json
 {
   "get": {
     "description": "Returns pets based on ID",
@@ -305,11 +342,11 @@ Everything starts with a specification file describing all the Entities and inte
     }
   ]
 }
-
- 
+```
 
 $ref relates to other entities described in the file (data models, structures etc). You can use primitives as the examples and return values (bool, string …) as well as hash-sets, compound objects and lists. Swagger allows you to specify the validation rules and authorization schemes (basic auth, oauth, oauth2).
 
+```json
 {
   "oauth2": {
     "type": "oauth2",
@@ -344,6 +381,7 @@ $ref relates to other entities described in the file (data models, structures et
     }
   }
 }
+```
 
 Last but not least swagger the OpenAPI specification format has become more and more a standard and should be considered when starting new API projects. It’s supported by many external tools and platforms - including Amazon API Gateway (NOTE:  http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html).
 
@@ -373,27 +411,33 @@ Widely used REST APIs are organized around HTTP endpoints. GraphQL APIs are diff
 
 Data definition:
 
+```graphql
 type Project {
   name: String
   tagline: String
   contributors: [User]
 }
+```
 
 Sample query:
 
+```graphql
 {
   project(name: "GraphQL") {
     tagline
   }
 }
+```
 
 Query result:
 
+```graphql
 {
   "project": {
     "tagline": "A query language for APIs"
   }
 }
+```
 
 GraphQL was developed internally by Facebook in 2012 and open-sourced 3 years later with Relay, a JavaScript framework for building data-driven React applications. Nowadays, the GraphQL ecosystem is growing rapidly; both server and frontend libraries are available for many programming languages and developers have dedicated tools for GraphQL API design. Many other organizations, including Github, Pinterest and Shopify are adopting GraphQL because of its benefits.
 

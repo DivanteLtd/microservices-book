@@ -4,7 +4,7 @@ This eBook is intended to give you a quick-start, practical overview of the micr
 
 ## Fundamentals of distributed systems
 
-The microservices architecture assumes the high distribution of our services. That introduces new categories of issues that may not even exist with monolithic approaches. There are two major theories that should be understood before diving deep into this new architecture.
+Microservices architecture assumes the high distribution of our services. That introduces new categories of issues that may not even exist with monolithic approaches. There are two major theories that should be understood before diving deep into this new architecture.
 
 ### CAP theorem
 
@@ -16,7 +16,7 @@ Also called "Brewer theorem" after Eric Brewer, states that,  for distributed sy
 
 * **Partition tolerance** - interpreted as a system able to work despite the number of dropped messages between cluster nodes.
 
-In other words - when it comes to communication issues (partition of the cluster), you must choose between **consistency **or **availability.** This is strongly connected with techniques of high availability like caching and data redundancy (eg. database replication).
+In other words - when it comes to communication issues (partition of the cluster), you must choose between **consistency** or **availability.** This is strongly connected with techniques of high availability like caching and data redundancy (eg. database replication).
 
 When the system is running normally - both availability and consistency can be provided. In case of failure, you get two choices:
 
@@ -24,7 +24,7 @@ When the system is running normally - both availability and consistency can be p
 
 * Provide the user with cached data (due to the very same reason as above).
 
-Traditional database systems (compliant with ACID (NOTE:  https://en.wikipedia.org/wiki/ACID)) prefer consistency over availability. 
+Traditional database systems (compliant with ACID (NOTE: https://en.wikipedia.org/wiki/ACID)) prefer consistency over availability. 
 
 ### Eventual consistency
 
@@ -94,17 +94,17 @@ Event Sourcing stores all changes as a time-ordered sequence of events; each eve
 
 Consider the following sequence of domain events, regarding each Order lifecycle:
 
-* OrderCreated
+* `OrderCreated`
 
-* OrderApproved
+* `OrderApproved`
 
-* OrderPaid
+* `OrderPaid`
 
-* OrderPrepared
+* `OrderPrepared`
 
-* OrderShipped
+* `OrderShipped`
 
-* OrderDelivered
+* `OrderDelivered`
 
 During the recreation phase, all events are fetched from the EventStore and applied to a newly constructed entity. Each applied event changes the internal state of the entity.
 
@@ -124,7 +124,7 @@ Event Sourcing works very well with CQRS and Event Storming, a technique for dom
 
 **Pros:**
 
-* Perfect for modeling complex domains..
+* Perfect for modeling complex domains...
 
 * Possibility to replay all stored events and build new read models.
 
@@ -136,7 +136,7 @@ Event Sourcing works very well with CQRS and Event Storming, a technique for dom
 
 * Eventually consistent model.
 
-### Event driven data management
+### Event-driven data management
 
 Microservices should be coupled as loosely as possible, It should be possible to develop, test, deploy and scale them independently. Sometimes an application should even be able to work without particular services (to comply with HA - high availability)… To achieve these requirements, each microservice should have a separate data store. Sounds easy - but what about the data itself? How to spread the information changes between services? What about consistency within the data?
 
@@ -203,8 +203,6 @@ Pete Hodgson (ex. Thought Works) suggests that BFFs work best when organized aro
 It’s then a common pattern to separate shared algorithms, models and code to separate the shared service or library used by frontend-related facades. Creating such duplications can be avoided.
 
 Let me quote a conclusion on BFF presented by Sam Newman himself:
-
- 
 
 *Backends For Frontends solve a pressing concern for mobile development when using microservices. In addition, they provide a compelling alternative to the general-purpose API backend, and many teams make use of them for purposes other than just mobile development. The simple act of limiting the number of consumers they support makes them much easier to work with and change, and helps teams developing customer-facing applications retain more autonomy.* (NOTE:  http://samnewman.io/patterns/architectural/bff/)
 

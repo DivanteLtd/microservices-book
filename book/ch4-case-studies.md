@@ -10,7 +10,7 @@ One of our B2B clients  came to us with the following issues to be solved:
 
 * Monolithic architecture, strongly tied to external systems (such as CRM, ERP, WMS) hindered changes and development of new features,.
 
-* CRM that became the SPoF (Single Point of Failure). Pivotal CRM was in charge of too many key  responsibilities including per-customer pricing , cart management and promotions.. Serious amount of technological debt due to legacy code.
+* CRM that became the SPoF (Single Point of Failure). Pivotal CRM was in charge of too many key  responsibilities including per-customer pricing , cart management and promotions... Serious amount of technological debt due to legacy code.
 
 * Scalability problems - the platform should be able to handle a new business model that requires broadening the offer and entering new markets.
 
@@ -36,9 +36,7 @@ During the analysis, we realized that it would be somewhat risky to collect all 
 
 Before you decide to take a similar step (to go along with a ready-made platform in the center of a microservices eco-system), look at the pros & cons of this approach.
 
- 
-
-Pros & Cons of choosing an end-2-end platform:
+### Pros & Cons of choosing an end-2-end platform:
 
 **Pros**:
 

@@ -70,7 +70,7 @@ Some of the features can be covered with Open Source products. It won’t be the
 
 ## Further reading
 
-To learn more about releasing the APIs to production I suggest you discover how the production-grade APIs are implemented by market leaders like Shopify and commerce tools
+To learn more about releasing the APIs to production I suggest you discover how the production-grade APIs are implemented by market leaders like Shopify and commercetools
 
 The GraphQL ecosystem is growing rapidly. Here I’ve put just some resources to keep on track:
 

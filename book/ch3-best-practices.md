@@ -6,7 +6,7 @@ This eBook is intended to show you the most popular design patterns and practice
 
 Sharing the same data structures between services can be difficult - particularly in environments where separate teams manage each microservice. Conflicts and surprising changes are not what you’re aiming for with a distributed approach.
 
-Breaking apart the data can make information management more complicated;the individual storage systems can easily de-sync or become inconsistent. You need to add a tool that performs master data management. While operating in the background, it must eventually find and fix inconsistencies. One of the patterns for such synchronization is **Event Sourcing. **This pattern can help you with such situations by providing you with a reliable history log of all data changes that can be rolled back and forth. **Eventual Consistency** and **CAP theorem** are fundamentals that must be considered during the design phase.
+Breaking apart the data can make information management more complicated;the individual storage systems can easily de-sync or become inconsistent. You need to add a tool that performs master data management. While operating in the background, it must eventually find and fix inconsistencies. One of the patterns for such synchronization is **Event Sourcing.** This pattern can help you with such situations by providing you with a reliable history log of all data changes that can be rolled back and forth. **Eventual Consistency** and **CAP theorem** are fundamentals that must be considered during the design phase.
 
 ![image alt text](gfx/image_4.jpg)
 
@@ -14,7 +14,7 @@ Breaking apart the data can make information management more complicated;the ind
 
 ## Rely on Contracts Between Services
 
-Keep all code at a similar level of maturity and stability. When you have to modify the behaviour of a currently deployed (and stable) microservice, it’s usually better to put the new logic into a new, separate service. It’s sometimes called "immutable architecture". 
+Keep all codes at a similar level of maturity and stability. When you have to modify the behavior of a currently deployed (and stable) microservice, it’s usually better to put the new logic into a new, separate service. It’s sometimes called "immutable architecture". 
 
 Another point here is that you should maintain similar, specific requirements for all microservices like data formats, enumerating return values and describing error handling.
 
@@ -30,7 +30,7 @@ Deploying microservices in containers is important because it means you need jus
 
 ## Treat Servers as Volatile
 
-Treat servers, particularly those that run customer-facing code, as interchangeable members of a group. It’s the only way to successfully use the cloud’s "auto scaling" feature.
+Treat servers, particularly those that run customer-facing code, as interchangeable members of a group. It’s the only way to successfully use the cloud’s "auto-scaling" feature.
 
 They all perform the same function, so you don’t need to be concerned with them individually. The role configuration across servers must be aligned and the deployment process should be fully automated.
 
