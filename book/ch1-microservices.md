@@ -45,7 +45,7 @@ Dockerization of IT environments, monitoring tools and DevOps tools (Ansible, Ch
 
 The microservice approach is subject to criticism for a number of issues:
 
-* The architecture introduces additional complexity and new problems to deal with, such as **network latency, message formats, load balancing, fault tolerance and monitoring.** Ignoring one of these belongs to the "fallacies of distributed computing".
+* The architecture introduces additional complexity and new problems to deal with, such as **network latency, message formats, load balancing, fault tolerance and monitoring** Ignoring one of these belongs to the "fallacies of distributed computing".
 
 * Automation is possible but in the simplest cases, tests and deployments may be more complicated than with the monolithic approach.
 

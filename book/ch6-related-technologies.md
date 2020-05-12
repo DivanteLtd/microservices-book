@@ -65,7 +65,7 @@ We didn’t want people to spend additional time on data synchronization: mappin
 There was always something important in the structure which could be missing especially with new integrations and fixing than on this point… You know how that story ends :)
 With the Shopware 6 integration (and the subsequent CommerceTools integration that we started at almost the same time), we came up with a bold idea to take us closer to our dream scenario. We decide to create a whole and complete set of interfaces and helpers which allow for the running eCommerce sites in a common way, not interfering with the backend entities schema.
 
-### commercetools + Vue Storefront Next
+### commercetools
 
 commercetools is a first headless eCommerce platform. Unlike other competitors which have been on the market some time, commercetools firmly believed in the headless approach from the very beginning. The commercetools developers didn't even bother building a downloadable piece of software, forcing customers to install it on their own. Instead, they created an entirely cloud-hosted eCommerce and powerful API. All of this enables users to get access to the platform without worrying about any infrastructure-related issues; it’s enough to create an account and then freely integrate your store with any third-party tools.
 
@@ -88,6 +88,8 @@ The Promotion builder interface can be used to model complex product/cart-level 
 #### Discounts / pricing engine
 
 ![commercetools discounts](https://commercetools.com/wp-content/uploads/2018/07/mc-discounts-800x481.png)
+
+
 
 #### PWA Accelerator
 

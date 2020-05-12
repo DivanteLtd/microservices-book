@@ -1,6 +1,6 @@
-# Appendix 3: Switching to Headless eCommerce with Vue Storefront & commercetools.
+# Interview: Switching to Headless eCommerce with Vue Storefront & commercetools.
 
-In this interview we discuss the case study of LoveCrafts. Migration from Magento1 into headless architecture with the commercetools as a backend and [Vue Storefront Next](https://blog.vuestorefront.io/vue-storefront-accelerating-enterprise-commerce-initiatives-with-commercetools/) as a frontend solution. Why this stack? How to plan the migration? How to select the right backend platform? The desired architecture.
+In this interview we discuss the case study of LoveCrafts. Migration from Magento into headless architecture with the commercetools as a backend and [Vue Storefront Next](https://blog.vuestorefront.io/vue-storefront-accelerating-enterprise-commerce-initiatives-with-commercetools/) as a frontend solution. Why this stack? How to plan the migration? How to select the right backend platform? The desired architecture.
 
 **Halil Köklü - CTO at LoveCrafts**
 

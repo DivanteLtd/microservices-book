@@ -28,7 +28,7 @@ Traditional database systems (compliant with ACID (NOTE: https://en.wikipedia.or
 
 ### Eventual consistency
 
-It’s not a programming technique but rather something you have to think about when designing distributed systems. This consistency model is connected directly to the CAP theorem and informally guarantees that if** no new updates are made to a given data item, eventually all access to that item will return the last updated value**.
+It’s not a programming technique but rather something you have to think about when designing distributed systems. This consistency model is connected directly to the CAP theorem and informally guarantees that if **no new updates are made to a given data item, eventually all access to that item will return the last updated value**.
 
 Eventually consistent services are often classified as providing BASE (**B**asically **A**vailable, **S**oft state, **E**ventual consistency) semantics, in contrast to traditional ACID guarantees.
 
