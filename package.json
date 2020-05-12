@@ -19,10 +19,10 @@
   "homepage": "https://github.com/DivanteLtd/microservices-book#readme",
   "dependencies": {
     "now": "^18.0.0",
-    "vuepress": "^1.4.1"
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-google-tag-manager": "^0.0.4"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.5.0",
     "@vuepress/plugin-pwa": "^1.5.0",
     "vuepress-plugin-autometa": "^0.1.13"
   }
