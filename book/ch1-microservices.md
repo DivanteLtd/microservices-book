@@ -5,6 +5,8 @@ Microservice architecture structures the application as a set of loosely coupled
 
 Services communicate using protocols such as HTTP/REST or (a less popular approach) using an asynchronous approach like AMQP. Services can be developed as separate applications and deployed independently. Data consistency is maintained using an event-driven architecture because each service should have its own database in order to be decoupled from other services. 
 
+Microservices deployed on the cloud can be vendor locked-in (by using vendor-specific services) or cloud-agnostic. Each option has its own pros and cons. Setting up cloud-specific services is usually faster and cheaper, but more difficult to migrate. Cloud agnostic services usually cost more but deliver much more flexibility.
+
 The most common forces dictating the Microservice approach: (NOTE:  According to: http://microservices.io/patterns/microservices.html)
 
 * Multiple teams of developers working on a single application.
@@ -31,7 +33,7 @@ The assumptions of the orthogonal architecture followed by microservices archite
 
 * The services are easy to replace.
 
-* Services are organized around capabilities, e.g., UI, front-end, recommendation, logistics, billing, etc.
+* Services are organized around capabilities, e.g., UI, front-end, recommendation, logistics, billing, or some business requirements like recurring payments, subcriptions, etc.
 
 The scalability and deployment processes of microservice-based systems can be much easier to automate compared to monolithic architectures. The Devops approach to infrastructure along with Cloud services is commonly in use. The examples of Spotify and Netflix (NOTE:  https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices/) inspire IT engineers to implement continuous delivery and monitoring.
 
@@ -46,6 +48,8 @@ Dockerization of IT environments, monitoring tools and DevOps tools (Ansible, Ch
 The microservice approach is subject to criticism for a number of issues:
 
 * The architecture introduces additional complexity and new problems to deal with, such as **network latency, message formats, load balancing, fault tolerance and monitoring** Ignoring one of these belongs to the "fallacies of distributed computing".
+
+* The cost of the network traffic between microservices must also be taken in the consideration, when using cloud solutions.
 
 * Automation is possible but in the simplest cases, tests and deployments may be more complicated than with the monolithic approach.
 
