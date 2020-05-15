@@ -5,6 +5,8 @@ Microservice architecture structures the application as a set of loosely coupled
 
 Services communicate using protocols such as HTTP/REST or (a less popular approach) using an asynchronous approach like AMQP. Services can be developed as separate applications and deployed independently. Data consistency is maintained using an event-driven architecture because each service should have its own database in order to be decoupled from other services. 
 
+Microservices deployed on the cloud can be vendor locked-in (by using vendor-specific services) or cloud-agnostic. Each option has its own pros and cons. Setting up cloud-specific services is usually faster and cheaper, but more difficult to migrate. Cloud agnostic services usually cost more but deliver much more flexibility.
+
 The most common forces dictating the Microservice approach: (NOTE:  According to: http://microservices.io/patterns/microservices.html)
 
 * Multiple teams of developers working on a single application.
