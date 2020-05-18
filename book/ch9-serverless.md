@@ -31,9 +31,9 @@ next few months.*
 
 ## What is Serverless all about?
 
-*Serverless computing is a cloud-computing execution model in which the
+*[Serverless computing](https://en.wikipedia.org/wiki/Serverless_computing) is a cloud-computing execution model in which the
 cloud provider runs the server, and dynamically manages the allocation
-of machine resources.*[^1]
+of machine resources.*
 
 For me, the key differentiator between classic Cloud services (such as
 AWS EC2) and Serverless is the **pricing model**. With Serverless, you
@@ -57,7 +57,7 @@ As there are no servers, there's no infrastructure **maintenance** as
 such. After you provision Serverless services with your favourite
 Infrastructure as code tool, you can almost forget about them for the
 next few months. AWS Lambda uptime that I was collecting for a year with
-Pingdom[^2] showed quite a nice value of 100%.
+[Pingdom](https://www.pingdom.com/) showed quite a nice value of 100%.
 
 ## Disadvantages of Serverless
 
@@ -72,7 +72,7 @@ technology is new, the ecosystem of tools that allows for local
 development of serverless-based services is still quite small.
 To overcome that, developers often have to stub Cloud services such as
 databases. It's also possible to run a cloud service locally using tools
-like LocalStack[^3] that try to emulate the most popular AWS services.
+like [LocalStack](https://github.com/localstack/localstack) that try to emulate the most popular AWS services.
 Serverless and event based architectures require from us a high coverage
 of unit tests as that is often the only way to test the application
 locally.
@@ -212,7 +212,7 @@ time of about 40 ms across the whole globe.
 **Amazon S3** is an object storage service that allows for storage of
 our website's static files. It can't be used for dynamic pages (e.g.
 PHP), however it suits perfectly as a place to keep files generated with
-static site generators (such as Jekyll[^4] or Hugo[^5]).
+static site generators (such as [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/)).
 
 #### Pricing model
 
@@ -321,8 +321,3 @@ Placed*).
 </tr>
 </table>
 
-[^1]: [[en.wikipedia.org/wiki/Serverless\_computing]{.underline}](https://en.wikipedia.org/wiki/Serverless_computing)
-[^2]: [[pingdom.com]{.underline}](https://www.pingdom.com/)
-[^3]: [[github.com/localstack/localstack]{.underline}](https://github.com/localstack/localstack)
-[^4]: [[jekyllrb.com]{.underline}](https://jekyllrb.com/)
-[^5]: [[gohugo.io]{.underline}](https://gohugo.io/)
