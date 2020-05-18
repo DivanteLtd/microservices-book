@@ -127,9 +127,10 @@ Let’s get started!
     * New Relic Insights NRQL language
 7. [Enterprise GraphQL](ch7-enterprise-graphql.md)
 8. [JAM Stack](ch8-jam-stack.md)
-9. [Appendix 1: Microservices and unicycling](extra-microservices-and-unicycling.md)
-10. [Appendix 2: Blogs and resources](extra-blogs-and-resources.md)
-11. [Appendix 3: From Magento to Headless eCommerce. Interview with Halil Köklü](ch10-migrating-towards-headless.md)
+9. [Serverless](ch9-serverless.md)
+10. [Appendix 1: Microservices and unicycling](extra-microservices-and-unicycling.md)
+11. [Appendix 2: Blogs and resources](extra-blogs-and-resources.md)
+12. [Appendix 3: From Magento to Headless eCommerce. Interview with Halil Köklü](ch10-migrating-towards-headless.md)
 
 
 
@@ -155,7 +156,7 @@ eCommerce Solution Architect, responsible for Magento 2 technology at Divante. S
 
 ### Antoni Orfin
 
-Solutions architect specialized in designing highly-scalable web applications and introducing best practices in software development process. Speaker at several IT conferences. Currently responsible for systems architecture and driving DevOps methodology at Droplr.com.
+Solutions architect specialized in designing highly-scalable web applications and introducing best practices in software development process. Speaker at several IT conferences. Currently responsible Solutions Architecture at PGS Software
 
 ### Mike Grabowski
 
