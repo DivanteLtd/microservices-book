@@ -245,7 +245,7 @@ code. For our database we will go with **Amazon DynamoDB**.
 
 #### Architecture
 
-### ![](gfx/image_36.png)
+![Another architecture example](gfx/image_36.png)
 
 #### Key components
 
