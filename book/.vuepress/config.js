@@ -69,9 +69,11 @@ module.exports = {
           ['ch5-related-techniques', 'Chapter 5: Related techniques and patterns'],        
           ['ch6-related-technologies', 'Chapter 6: Related technologies'],        
           ['ch7-enterprise-graphql', 'Chapter 7: Enterprise GraphQL'],
-          ['ch8-cto-community', 'CTO Community: Interviews, Case Studies and more'],
-          ['ch9-blogs-and-resources', 'Appendix 2: Blogs and resources'],
-          ['ch10-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling']
+          ['ch8-jam-stack', 'Chapter 8: JAM Stack'],
+          ['ch9-serverless', 'Chapter 9: Serverless'],
+          ['extra-cto-community', 'CTO Community: Interviews, Case Studies and more'],
+          ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources'],
+          ['extra-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling']
         ]
     },
     title: 'Microservices Architecture for eCommerce',

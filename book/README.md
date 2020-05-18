@@ -108,6 +108,8 @@ Let’s get started!
  * Microservices based e-commerce platforms
     * Sylius
     * Spryker
+    * commercetools
+    * Shopware6
     * Open Loyalty
     * Pimcore
  * Technologies that empower microservices architecture
@@ -124,9 +126,10 @@ Let’s get started!
     * New Relic Insights
     * New Relic Insights NRQL language
 7. [Enterprise GraphQL](ch7-enterprise-graphql.md)
-8. [Appendix 1: Microservices and unicycling](ch10-microservices-and-unicycling.md)
-9. [Appendix 2: Blogs and resources](ch9-blogs-and-resources.md)
-10. [Appendix 3: From Magento to Headless eCommerce. Interview with Halil Köklü](ch10-migrating-towards-headless.md)
+8. [JAM Stack](ch8-jam-stack.md)
+9. [Appendix 1: Microservices and unicycling](extra-microservices-and-unicycling.md)
+10. [Appendix 2: Blogs and resources](extra-blogs-and-resources.md)
+11. [Appendix 3: From Magento to Headless eCommerce. Interview with Halil Köklü](ch10-migrating-towards-headless.md)
 
 
 
