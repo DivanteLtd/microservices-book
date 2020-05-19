@@ -71,6 +71,7 @@ module.exports = {
           ['ch7-enterprise-graphql', 'Chapter 7: Enterprise GraphQL'],
           ['ch8-jam-stack', 'Chapter 8: JAM Stack'],
           ['ch9-serverless', 'Chapter 9: Serverless'],
+          ['ch10-team-structure', 'Chapter 10: Team Structure'],
           ['extra-cto-community', 'CTO Community: Interviews, Case Studies and more'],
           ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources'],
           ['extra-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling']
