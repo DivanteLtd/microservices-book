@@ -41,6 +41,14 @@ Storefront GraphQL API. Easy to use. Extendable. Blazingly fast. ElasticSearch i
 
 You can use the Storefront GraphQL API to integrate all your backend systems with your eCommerce frontend under a single GraphQL/REST API. By default, all catalog information is stored in ElasticSearch, and all the write operations are forwarded to the platform driver (Magento1, Magento2, Spree, and others available).
 
+### SAP Spartacus
+
+Spartacus is a set of JavaScript libraries for building decoupled storefronts for SAP Commerce Cloud (aka hybris). It's a successor of the accelerator-based storefronts which were a monolithic solution. Spartacus delivers a lot of out of the box features which were present in the former solution.
+
+Technically, Spartacus is Angular-based, so it allows the building of SPA and PWA storefronts using this enterprise-ready frontend framework. It is designed to be upgradable while maintaining full extendability. New versions of Spartacus are released nearly every week.
+
+Spartacus is also open-source and free to use. Although it is technically possible to connect it to any kind of backend it is designed to be connected with SAP Commerce Cloud through OCC REST API.
+
 ### Shopware 6 with Shopware-PWA
 
 Shopware 6 is the next generation of open-source eCommerce software based on bleeding-edge technologies powered by Symfony and Vue.js. Focused on an API-first approach, Shopware provides more flexibility and less complexity. 
