@@ -73,8 +73,9 @@ module.exports = {
           ['ch9-serverless', 'Chapter 9: Serverless'],
           ['ch10-team-structure', 'Chapter 10: Team Structure'],
           ['extra-cto-community', 'CTO Community: Interviews, Case Studies and more'],
-          ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources'],
-          ['extra-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling']
+          ['extra-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling'],
+          ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources',
+          ['extra-hidden-costs', 'Appendix 3: The hidden cost of microservices: complexity']
         ]
     },
     title: 'Microservices Architecture for eCommerce',
