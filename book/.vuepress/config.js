@@ -74,7 +74,7 @@ module.exports = {
           ['ch10-team-structure', 'Chapter 10: Team Structure'],
           ['extra-cto-community', 'CTO Community: Interviews, Case Studies and more'],
           ['extra-microservices-and-unicycling', 'Appendix 1: Microservices and unicycling'],
-          ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources',
+          ['extra-blogs-and-resources', 'Appendix 2: Blogs and resources'],
           ['extra-hidden-costs', 'Appendix 3: The hidden cost of microservices: complexity']
         ]
     },
